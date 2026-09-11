@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #003755;
+  --navy-2: #012c45;
+  --graphite: #0f1c26;
+  --graphite-2: #152430;
+  --ink: #1a2430;
+  --paper: #ffffff;
+  --mist: #f4f7fa;
+  --stone: #c9d4de;
+  --muted: #5b6b78;
+  --brand: #22b8f0;
+  --brand-dark: #065ba8;
+  --brand-navy: #003755;
+  --brand-soft: #d6eef8;
+  --header-h: 5.25rem;
+}
+
+@theme inline {
+  --color-navy: var(--navy);
+  --color-navy-2: var(--navy-2);
+  --color-graphite: var(--graphite);
+  --color-graphite-2: var(--graphite-2);
+  --color-ink: var(--ink);
+  --color-paper: var(--paper);
+  --color-mist: var(--mist);
+  --color-stone: var(--stone);
+  --color-muted: var(--muted);
+  --color-brand: var(--brand);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-navy: var(--brand-navy);
+  --color-brand-soft: var(--brand-soft);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-manrope);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-inter), var(--font-sans), "Segoe UI", sans-serif;
+  font-feature-settings: "ss01" on, "cv11" on;
+  letter-spacing: -0.011em;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-manrope), var(--font-display), sans-serif;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+::selection {
+  background: var(--brand-dark);
+  color: white;
+}
+
+.container-site {
+  margin-inline: auto;
+  width: min(1180px, calc(100% - 2rem));
+}
+
+@media (min-width: 768px) {
+  .container-site {
+    width: min(1180px, calc(100% - 3rem));
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 0.45s ease,
+    transform 0.45s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@layer components {
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 10px;
+  padding: 0.8rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--brand);
+  color: #003755;
+}
+
+.btn-primary:hover {
+  background: #4dc8f4;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--navy);
+  border: 1px solid rgba(0, 55, 85, 0.16);
+}
+
+.btn-outline:hover {
+  border-color: var(--brand-dark);
+  color: var(--brand-dark);
+}
+
+.btn-dark {
+  background: var(--navy);
+  color: #fff;
+}
+
+.btn-dark:hover {
+  background: var(--brand-dark);
+}
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  border: 1px solid rgba(0, 55, 85, 0.14);
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 4px rgba(34, 184, 240, 0.16);
+}
+
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 64" fill="none">
+  <rect width="64" height="64" rx="4" fill="#22b8f0"/>
+  <path d="M18 16h10l10 14-10 18H18l10-18-10-14z" fill="#003755"/>
+  <path d="M32 16h10v32H32z" fill="#ffffff"/>
+  <text x="80" y="30" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">KAZaircompressor</text>
+  <text x="80" y="50" fill="#9adcf8" font-family="Arial, Helvetica, sans-serif" font-size="12">&#1050;&#1086;&#1084;&#1087;&#1088;&#1077;&#1089;&#1089;&#1086;&#1088;&#1085;&#1086;&#1077; &#1086;&#1073;&#1086;&#1088;&#1091;&#1076;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077;</text>
+</svg>

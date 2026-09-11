@@ -1,0 +1,9 @@
+node_modules
+.next
+out
+build
+_scrape
+.env*
+!.env.example
+*.pem
+npm-debug.log*
