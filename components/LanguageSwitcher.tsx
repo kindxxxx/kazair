@@ -16,7 +16,7 @@ export function LanguageSwitcher() {
       {(
         [
           { id: "ru", label: "RU" },
-          { id: "kk", label: "ҚАЗ" },
+          { id: "kk", label: "KZ" },
         ] as const
       ).map((item) => (
         <button

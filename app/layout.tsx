@@ -7,14 +7,14 @@ import { getSiteUrl } from "@/lib/site";
 import "./globals.css";
 
 const inter = Inter({
-  subsets: ["latin", "cyrillic"],
+  subsets: ["latin", "cyrillic", "cyrillic-ext"],
   variable: "--font-inter",
   display: "swap",
   preload: true,
 });
 
 const manrope = Manrope({
-  subsets: ["latin", "cyrillic"],
+  subsets: ["latin", "cyrillic", "cyrillic-ext"],
   variable: "--font-manrope",
   display: "swap",
   preload: true,

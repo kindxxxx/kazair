@@ -168,6 +168,42 @@ select:focus {
   box-shadow: 0 0 0 4px rgba(34, 184, 240, 0.16);
 }
 
+.spec-table-wrap {
+  overflow-x: auto;
+  border: 1px solid rgba(0, 55, 85, 0.1);
+  background: #fff;
+  border-radius: 12px;
+}
+
+.spec-table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.spec-table th,
+.spec-table td {
+  padding: 0.7rem 0.8rem;
+  text-align: left;
+  white-space: nowrap;
+  border-bottom: 1px solid rgba(0, 55, 85, 0.08);
+}
+
+.spec-table th {
+  background: #003755;
+  color: #fff;
+  font-weight: 600;
+}
+
+.spec-table tbody tr:nth-child(even) {
+  background: #f4f7fa;
+}
+
+.spec-table tbody tr:hover {
+  background: #d6eef8;
+}
+
 .honeypot {
   position: absolute;
   left: -9999px;

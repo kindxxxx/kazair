@@ -5,7 +5,11 @@ import { Reveal } from "@/components/Reveal";
 import { WhatsAppLink } from "@/components/ContactLinks";
 import { useLocale } from "@/lib/i18n/locale";
 
-export function ServiceView() {
+export function ServiceView({
+  headingAs: Heading = "h1",
+}: {
+  headingAs?: "h1" | "h2";
+}) {
   const { t } = useLocale();
 
   return (
@@ -14,7 +18,7 @@ export function ServiceView() {
         <p className="text-xs font-semibold tracking-[0.18em] text-brand uppercase">
           {t.service.label}
         </p>
-        <h1 className="mt-3 max-w-3xl font-display text-4xl">{t.service.title}</h1>
+        <Heading className="mt-3 max-w-3xl font-display text-4xl">{t.service.title}</Heading>
         <p className="mt-5 max-w-3xl text-muted">{t.service.lead}</p>
       </Reveal>
 

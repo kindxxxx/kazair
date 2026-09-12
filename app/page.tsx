@@ -7,6 +7,7 @@ import { HowToOrder } from "@/components/HowToOrder";
 import { Clients } from "@/components/Clients";
 import { About } from "@/components/About";
 import { Contacts } from "@/components/Contacts";
+import { ServiceView } from "@/components/ServiceView";
 import { products } from "@/data/products";
 import { getSiteUrl } from "@/lib/site";
 
@@ -23,9 +24,12 @@ export default function HomePage() {
       <Catalog products={products} />
       <Popular />
       <HowToOrder />
-      <Clients />
+      <section id="service" className="scroll-mt-24 bg-paper py-16 md:py-24">
+        <ServiceView headingAs="h2" />
+      </section>
       <About />
       <Contacts compact />
+      <Clients />
     </>
   );
 }

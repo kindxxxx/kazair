@@ -15,7 +15,7 @@ export function Footer() {
     <footer className="bg-navy text-white">
       <div className="container-site grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <Logo variant="white" className="h-11 w-auto" />
+          <Logo variant="white" />
           <p className="mt-4 text-sm text-white/65">{t.company.tagline}</p>
           <WhatsAppLink className="btn btn-primary mt-6">WhatsApp</WhatsAppLink>
         </div>
@@ -35,6 +35,9 @@ export function Footer() {
             </Link>
             <Link href="/contacts" className="hover:text-brand">
               {t.nav.contacts}
+            </Link>
+            <Link href="/#partners" className="hover:text-brand">
+              {t.nav.partners}
             </Link>
           </nav>
         </div>

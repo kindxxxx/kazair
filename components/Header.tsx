@@ -21,9 +21,10 @@ export function Header() {
 
   const nav = [
     { href: "/catalog", label: t.nav.catalog, hash: "#catalog" },
-    { href: "/service", label: t.nav.service },
-    { href: "/#about", label: t.nav.about },
-    { href: "/contacts", label: t.nav.contacts },
+    { href: "/service", label: t.nav.service, hash: "#service" },
+    { href: "/#about", label: t.nav.about, hash: "#about" },
+    { href: "/contacts", label: t.nav.contacts, hash: "#contacts" },
+    { href: "/#partners", label: t.nav.partners, hash: "#partners" },
   ];
 
   if (menuPath !== pathname) {
@@ -63,7 +64,7 @@ export function Header() {
           <Logo variant="white" />
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex" aria-label={t.nav.mainNav}>
+        <nav className="hidden items-center gap-5 xl:gap-7 lg:flex" aria-label={t.nav.mainNav}>
           {nav.map((item) => (
             <Link
               key={item.href}

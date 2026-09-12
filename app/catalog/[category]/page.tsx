@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Catalog } from "@/components/Catalog";
-import { CategoryHero } from "@/components/CategoryHero";
 import { JsonLd } from "@/components/JsonLd";
 import { categories, getCategory, products, type CategoryId } from "@/data/products";
 import { getSiteUrl } from "@/lib/site";
@@ -55,20 +54,12 @@ export default async function CategoryPage({ params }: Props) {
   return (
     <div className="bg-paper pt-24">
       <JsonLd data={breadcrumbJsonLd} />
-      <CategoryHero
-        category={{
-          id: item.id,
-          name: item.name,
-          intro: item.intro,
-          cover: item.cover,
-        }}
-      />
       <Catalog
         products={products}
         initialCategory={item.id as CategoryId}
         syncUrl
         title={item.name}
-        headingAs="h2"
+        headingAs="h1"
       />
     </div>
   );

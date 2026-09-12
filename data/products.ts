@@ -9,19 +9,11 @@ export const categories = [
   },
   {
     id: "mobile",
-    name: "Передвижные компрессоры",
+    name: "Передвижные / мобильные компрессоры",
     image: "/images/cat-mobile.jpg",
     cover: "/images/slide-mobile.webp",
     intro:
       "Мобильные/передвижные компрессоры с дизельным приводом ROTORCOMP для работы при отсутствии электроэнергии. Добыча, дорожное строительство, пескоструй и резерв стационарных установок.",
-  },
-  {
-    id: "hp",
-    name: "Компрессоры высокого давления",
-    image: "/images/cat-hp.jpg",
-    cover: "/images/slide-piston.webp",
-    intro:
-      "Поршневые компрессоры высокого давления для воздуха, газа, азота и гелия. Ременные, прямой привод, с частотным преобразователем, с осушителем и Oil Free.",
   },
   {
     id: "turbo",
@@ -30,6 +22,14 @@ export const categories = [
     cover: "/images/slide-turbo.webp",
     intro:
       "Центробежные компрессоры высокой производительности: воздушные, азотные и кислородные API 672, а также решения API 617 для нефтяной, химической и газовой промышленности.",
+  },
+  {
+    id: "hp",
+    name: "Поршневые компрессоры высокого давления",
+    image: "/images/cat-hp.jpg",
+    cover: "/images/slide-piston.webp",
+    intro:
+      "Поршневые компрессоры высокого давления для воздуха, газа, азота и гелия. Ременные, прямой привод, с частотным преобразователем, с осушителем и Oil Free.",
   },
   {
     id: "mks",
@@ -56,14 +56,6 @@ export const categories = [
       "Процессные, рукавные и магистральные фильтры Donaldson, Ultrafilter, Omega Air и других производителей для газов и жидкостей.",
   },
   {
-    id: "generators",
-    name: "Генераторы азота и кислорода",
-    image: "/images/cat-generators.jpg",
-    cover: "/images/products/gen-1.jpg",
-    intro:
-      "Генераторы N-GEN / O-GEN и готовые SKID-системы OmegaAir. Азот чистотой до 99,999 %, кислород до 95 %.",
-  },
-  {
     id: "receivers",
     name: "Ресиверы (воздухосборники)",
     image: "/images/cat-receivers.jpg",
@@ -72,8 +64,16 @@ export const categories = [
       "Ресиверы для сжатого воздуха и газов объёмом до 100 м³ и более, с рабочим давлением до 400 бар. Ходовые модели 25–900 литров есть на складе.",
   },
   {
+    id: "generators",
+    name: "Генераторы Азота и Кислорода",
+    image: "/images/cat-generators.jpg",
+    cover: "/images/products/gen-1.jpg",
+    intro:
+      "Генераторы N-GEN / O-GEN и готовые SKID-системы OmegaAir. Азот чистотой до 99,999 %, кислород до 95 %.",
+  },
+  {
     id: "gas",
-    name: "Компрессоры АГНКС и АЗС СПГ",
+    name: "Компрессоры для газа (АГНКС и АЗС СПГ)",
     image: "/images/cat-gas.jpg",
     cover: "/images/products/gas-1.jpg",
     intro:
@@ -81,7 +81,7 @@ export const categories = [
   },
   {
     id: "parts",
-    name: "Запасные части",
+    name: "Запасные части и расходные материалы",
     image: "/images/cat-parts.jpg",
     cover: "/images/products/parts.jpg",
     intro:
@@ -101,6 +101,7 @@ export type Product = {
   description: string;
   body?: string;
   specifications: { label: string; value: string }[];
+  tableIds?: string[];
 };
 
 export const products: Product[] = [
@@ -118,6 +119,7 @@ export const products: Product[] = [
       { label: "Производительность", value: "0,43–48,00 м³/мин" },
       { label: "Давление", value: "5–13 бар" },
     ],
+    tableIds: ["almig-premium"],
   },
   {
     id: "rotorcomp-screw",
@@ -133,6 +135,7 @@ export const products: Product[] = [
       { label: "Производительность", value: "0,75–104,00 м³/мин" },
       { label: "Давление", value: "3–40 бар" },
     ],
+    tableIds: ["rotorcomp-screw"],
   },
   {
     id: "oil-free",
@@ -148,6 +151,7 @@ export const products: Product[] = [
       { label: "Производительность", value: "6,40–86,20 м³/мин" },
       { label: "Мощность", value: "45–560 кВт" },
     ],
+    tableIds: ["almig-premium"],
   },
   {
     id: "integrated-laser",
@@ -163,6 +167,7 @@ export const products: Product[] = [
       { label: "Производительность", value: "0,61–6,60 м³/мин" },
       { label: "Мощность", value: "5,5–37 кВт" },
     ],
+    tableIds: ["almig-premium"],
   },
   {
     id: "mobile-rotorcomp",
@@ -179,6 +184,7 @@ export const products: Product[] = [
       { label: "Давление", value: "6–40 бар" },
       { label: "Двигатели", value: "Deutz, Cummins, Yuchai, Caterpillar" },
     ],
+    tableIds: ["mobile-rotorcomp"],
   },
   {
     id: "mobile-ly-12-10",
@@ -194,6 +200,7 @@ export const products: Product[] = [
       { label: "Двигатель", value: "Cummins 150 HP" },
       { label: "Габариты", value: "3900×1920×1900 мм" },
     ],
+    tableIds: ["mobile-rotorcomp"],
   },
   {
     id: "mobile-ly-25-10",
@@ -209,6 +216,7 @@ export const products: Product[] = [
       { label: "Двигатель", value: "Cummins 260 HP" },
       { label: "Габариты", value: "3980×1800×2450 мм" },
     ],
+    tableIds: ["mobile-rotorcomp"],
   },
   {
     id: "hp-piston",
@@ -271,6 +279,7 @@ export const products: Product[] = [
       { label: "Давление", value: "до 80 бар" },
       { label: "Срок службы", value: "до 30 лет" },
     ],
+    tableIds: ["turbo-range"],
   },
   {
     id: "turbo-api617",
@@ -285,6 +294,7 @@ export const products: Product[] = [
       { label: "Среда", value: "Нефть, химия, газ" },
       { label: "Исполнение", value: "Блоками, без фундамента" },
     ],
+    tableIds: ["turbo-range"],
   },
   {
     id: "turbo-n2-o2",
@@ -298,6 +308,7 @@ export const products: Product[] = [
       { label: "Среда", value: "N2 / O2" },
       { label: "Воздух", value: "Всегда Oil Free" },
     ],
+    tableIds: ["turbo-range"],
   },
   {
     id: "mks-20ft",
@@ -314,6 +325,7 @@ export const products: Product[] = [
       { label: "Вес пустой", value: "2 250 кг" },
       { label: "Макс. вес", value: "30 480 кг" },
     ],
+    tableIds: ["mks-containers"],
   },
   {
     id: "mks-40ft",
@@ -328,6 +340,7 @@ export const products: Product[] = [
       { label: "Вес пустой", value: "3 740 кг" },
       { label: "Климат", value: "УХЛ1, −60…+45 °C" },
     ],
+    tableIds: ["mks-containers"],
   },
   {
     id: "mks-sandwich",
@@ -342,6 +355,7 @@ export const products: Product[] = [
       { label: "Наполнение", value: "По требованию заказчика" },
       { label: "Управление", value: "Автоматизация, вывод на ПК" },
     ],
+    tableIds: ["mks-containers"],
   },
   {
     id: "dryer-ref",
@@ -422,6 +436,7 @@ export const products: Product[] = [
       { label: "Типы", value: "M, B, P, V, S, A" },
       { label: "Назначение", value: "Магистральная очистка воздуха" },
     ],
+    tableIds: ["line-filters"],
   },
   {
     id: "n-gen",
@@ -437,6 +452,7 @@ export const products: Product[] = [
       { label: "Чистота", value: "до 99,999 %" },
       { label: "Точка росы", value: "< −45 °C" },
     ],
+    tableIds: ["n-gen"],
   },
   {
     id: "n-gen-skid",
@@ -452,6 +468,7 @@ export const products: Product[] = [
       { label: "Производительность", value: "0,83–766,8 Нм³/ч" },
       { label: "Чистота", value: "до 99,999 %" },
     ],
+    tableIds: ["n-gen"],
   },
   {
     id: "o-gen",
@@ -467,6 +484,7 @@ export const products: Product[] = [
       { label: "Чистота", value: "до 95 %" },
       { label: "Точка росы", value: "< −60 °C" },
     ],
+    tableIds: ["o-gen"],
   },
   {
     id: "o-gen-skid",
@@ -480,6 +498,7 @@ export const products: Product[] = [
       { label: "Давление", value: "5–6 бар" },
       { label: "Чистота", value: "до 95 %" },
     ],
+    tableIds: ["o-gen"],
   },
   {
     id: "receivers-std",
