@@ -116,7 +116,7 @@ export function Catalog({
             <Heading className="mt-3 font-display text-3xl md:text-4xl">{heading}</Heading>
           </div>
           <label className="relative w-full md:max-w-sm">
-            <Search className="pointer-events-none absolute top-1/2 left-4 h-4 w-4 -translate-y-1/2 text-muted" />
+            <Search className="pointer-events-none absolute top-1/2 left-3.5 h-4 w-4 -translate-y-1/2 text-muted" />
             <input
               value={query}
               onChange={(event) => {
@@ -124,7 +124,7 @@ export function Catalog({
                 setShowAll(false);
               }}
               placeholder={t.catalog.search}
-              className="pl-11"
+              className="pl-12!"
               aria-label={t.catalog.search}
             />
           </label>
