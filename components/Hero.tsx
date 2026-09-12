@@ -1,16 +1,27 @@
+"use client";
+
 import Image from "next/image";
 import { heroSlides } from "@/data/products";
-import { company } from "@/data/company";
-import { LeadButton } from "@/components/LeadForm";
+import { WhatsAppLink } from "@/components/ContactLinks";
+import { useLocale } from "@/lib/i18n/locale";
 
-const facts = ["С 2012 года", "Алматы", "Проекты «под ключ»"];
 const brands = ["ALMiG", "Hanwha", "ROTORCOMP", "Atlas Copco"];
 
 export function Hero() {
+  const { t } = useLocale();
+  const slideTitles = [
+    t.hero.slides.turbo,
+    t.hero.slides.almig,
+    t.hero.slides.rotorcomp,
+    t.hero.slides.mobile,
+    t.hero.slides.piston,
+    t.hero.slides.mks,
+  ];
+
   return (
     <section className="relative isolate overflow-hidden bg-navy text-white">
       <Image
-        src="/images/hero-bg.jpg"
+        src="/images/hero-bg.webp"
         alt=""
         fill
         priority
@@ -23,54 +34,52 @@ export function Hero() {
       <div className="container-site relative grid min-h-[100svh] items-center gap-10 py-28 lg:grid-cols-[1.15fr_0.85fr] lg:py-32">
         <div className="max-w-2xl rounded-xl border border-white/12 bg-white/8 p-6 shadow-[0_20px_60px_rgba(0,20,40,0.25)] backdrop-blur-md sm:p-8">
           <p className="text-xs font-semibold tracking-[0.2em] text-brand uppercase">
-            {facts.join("  ·  ")}
+            {t.hero.facts}
           </p>
           <h1 className="mt-5 max-w-4xl font-display text-[1.7rem] leading-tight uppercase sm:text-4xl lg:text-5xl">
-            {company.headline}
+            {t.company.headline}
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-7 text-white/85 sm:text-lg">
-            {company.heroSubtitle}
+            {t.company.heroSubtitle}
           </p>
           <p className="mt-5 max-w-2xl text-sm text-white/70">
-            Бренды: {brands.join(", ")} и др.
+            {t.hero.brands}: {brands.join(", ")}
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a href="#catalog" className="btn btn-primary px-7 py-3.5">
-              Каталог
+              {t.hero.catalog}
             </a>
-            <LeadButton className="btn btn-secondary px-7 py-3.5">
-              Оставить заявку
-            </LeadButton>
+            <WhatsAppLink className="btn btn-secondary px-7 py-3.5">WhatsApp</WhatsAppLink>
           </div>
         </div>
 
         <div className="hidden gap-3 lg:grid">
-          <div className="relative aspect-[16/10] overflow-hidden rounded-xl border border-white/12 bg-white/8 shadow-[0_16px_40px_rgba(0,20,40,0.28)] backdrop-blur-sm">
+          <div className="relative aspect-[16/10] overflow-hidden rounded-xl border border-white/12 bg-white shadow-[0_16px_40px_rgba(0,20,40,0.28)]">
             <Image
               src={heroSlides[1].image}
-              alt={heroSlides[1].title}
+              alt={slideTitles[1]}
               fill
               priority
-              className="object-cover"
+              className="object-contain p-3"
               sizes="40vw"
             />
           </div>
           <div className="grid grid-cols-2 gap-3">
-            {[heroSlides[0], heroSlides[3]].map((slide) => (
+            {[0, 3].map((index) => (
               <article
-                key={slide.title}
+                key={heroSlides[index].title}
                 className="overflow-hidden rounded-xl border border-white/12 bg-white/8 backdrop-blur-sm"
               >
-                <div className="relative h-28">
+                <div className="relative aspect-[16/10] bg-white">
                   <Image
-                    src={slide.image}
-                    alt={slide.title}
+                    src={heroSlides[index].image}
+                    alt={slideTitles[index]}
                     fill
-                    className="object-cover"
+                    className="object-contain p-2"
                     sizes="200px"
                   />
                 </div>
-                <p className="px-3 py-2 text-xs leading-5 text-white/80">{slide.title}</p>
+                <p className="px-3 py-2 text-xs leading-5 text-white/80">{slideTitles[index]}</p>
               </article>
             ))}
           </div>

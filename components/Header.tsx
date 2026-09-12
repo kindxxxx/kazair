@@ -3,40 +3,44 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, Phone, X } from "lucide-react";
+import { Mail, Menu, Phone, X } from "lucide-react";
 import { company } from "@/data/company";
-import { LeadButton } from "@/components/LeadForm";
+import { EmailLink, WhatsAppLink } from "@/components/ContactLinks";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { Logo } from "@/components/Logo";
+import { useLocale } from "@/lib/i18n/locale";
 import { cn } from "@/lib/utils";
-
-const nav = [
-  { href: "/catalog", label: "Каталог", hash: "#catalog" },
-  { href: "/service", label: "Сервис" },
-  { href: "/#about", label: "О компании" },
-  { href: "/contacts", label: "Контакты" },
-];
 
 export function Header() {
   const pathname = usePathname();
   const isHome = pathname === "/";
-  const [compact, setCompact] = useState(!isHome);
+  const { t } = useLocale();
+  const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [menuPath, setMenuPath] = useState(pathname);
+
+  const nav = [
+    { href: "/catalog", label: t.nav.catalog, hash: "#catalog" },
+    { href: "/service", label: t.nav.service },
+    { href: "/#about", label: t.nav.about },
+    { href: "/contacts", label: t.nav.contacts },
+  ];
+
+  if (menuPath !== pathname) {
+    setMenuPath(pathname);
+    setMenuOpen(false);
+  }
+
+  const compact = !isHome || scrolled;
 
   useEffect(() => {
-    if (!isHome) {
-      setCompact(true);
-      return;
-    }
+    if (!isHome) return;
 
-    const onScroll = () => setCompact(window.scrollY > 24);
+    const onScroll = () => setScrolled(window.scrollY > 24);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, [isHome]);
-
-  useEffect(() => {
-    setMenuOpen(false);
-  }, [pathname]);
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
@@ -59,10 +63,10 @@ export function Header() {
           <Logo variant="white" />
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex" aria-label="Основная навигация">
+        <nav className="hidden items-center gap-8 lg:flex" aria-label={t.nav.mainNav}>
           {nav.map((item) => (
             <Link
-              key={item.label}
+              key={item.href}
               href={isHome && item.hash ? item.hash : item.href}
               className="text-sm text-white/80 transition hover:text-white"
             >
@@ -72,6 +76,7 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <LanguageSwitcher />
           <div className="hidden flex-col items-end leading-tight lg:flex">
             <a href={company.phoneHref} className="text-sm font-semibold hover:text-brand">
               {company.phone}
@@ -83,25 +88,26 @@ export function Header() {
           <a
             href={company.phoneHref}
             className="grid h-11 w-11 place-items-center rounded-[10px] bg-white/10 lg:hidden"
-            aria-label={`Позвонить ${company.phone}`}
+            aria-label={`${t.header.call} ${company.phone}`}
           >
             <Phone className="h-4 w-4" />
           </a>
-          <LeadButton className="btn btn-primary hidden px-4 py-3 md:inline-flex">
-            Оставить заявку
-          </LeadButton>
-          <a
-            href={company.whatsappHref}
-            target="_blank"
-            rel="noreferrer"
-            className="btn btn-secondary hidden px-4 py-3 xl:inline-flex"
-          >
+          <WhatsAppLink className="btn btn-primary hidden px-4 py-3 md:inline-flex">
             WhatsApp
-          </a>
+          </WhatsAppLink>
+          <EmailLink className="btn btn-secondary hidden px-4 py-3 xl:inline-flex">
+            {t.header.email}
+          </EmailLink>
+          <EmailLink
+            className="hidden h-11 w-11 place-items-center rounded-[10px] bg-white/10 md:grid xl:hidden"
+            aria-label={`${t.header.email} ${company.email}`}
+          >
+            <Mail className="h-4 w-4" />
+          </EmailLink>
           <button
             type="button"
             className="grid h-11 w-11 place-items-center rounded-[10px] bg-white/10 lg:hidden"
-            aria-label={menuOpen ? "Закрыть меню" : "Открыть меню"}
+            aria-label={menuOpen ? t.header.closeMenu : t.header.openMenu}
             onClick={() => setMenuOpen((value) => !value)}
           >
             {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -111,10 +117,10 @@ export function Header() {
 
       {menuOpen ? (
         <div className="border-t border-white/10 bg-navy lg:hidden">
-          <nav className="container-site flex flex-col gap-4 py-6" aria-label="Мобильная навигация">
+          <nav className="container-site flex flex-col gap-4 py-6" aria-label={t.nav.mobileNav}>
             {nav.map((item) => (
               <Link
-                key={item.label}
+                key={item.href}
                 href={isHome && item.hash ? item.hash : item.href}
                 className="text-lg"
                 onClick={() => setMenuOpen(false)}
@@ -128,17 +134,12 @@ export function Header() {
             <a href={company.phone2Href} className="text-base text-white/80">
               {company.phone2}
             </a>
-            <LeadButton className="btn btn-primary w-full" onClick={() => setMenuOpen(false)}>
-              Оставить заявку
-            </LeadButton>
-            <a
-              href={company.whatsappHref}
-              target="_blank"
-              rel="noreferrer"
-              className="btn btn-secondary w-full"
-            >
+            <WhatsAppLink className="btn btn-primary w-full" onClick={() => setMenuOpen(false)}>
               WhatsApp
-            </a>
+            </WhatsAppLink>
+            <EmailLink className="btn btn-secondary w-full" onClick={() => setMenuOpen(false)}>
+              {t.header.email}
+            </EmailLink>
           </nav>
         </div>
       ) : null}

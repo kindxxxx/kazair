@@ -1,12 +1,12 @@
 "use client";
 
-import { MessageCircle, Phone } from "lucide-react";
+import { Mail, MessageCircle, Phone } from "lucide-react";
 import { company } from "@/data/company";
-import { LeadButton, useLead } from "@/components/LeadForm";
+import { EmailLink, WhatsAppLink } from "@/components/ContactLinks";
+import { useLocale } from "@/lib/i18n/locale";
 
 export function MobileCTA() {
-  const { isLeadOpen } = useLead();
-  if (isLeadOpen) return null;
+  const { t } = useLocale();
 
   return (
     <div className="fixed inset-x-0 bottom-0 z-50 border-t border-white/10 bg-graphite/95 px-2 pt-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] backdrop-blur-md md:hidden">
@@ -16,20 +16,16 @@ export function MobileCTA() {
           className="btn btn-secondary h-auto min-h-12 flex-col gap-1 py-2 text-[11px]"
         >
           <Phone className="h-4 w-4" />
-          Позвонить
+          {t.header.call}
         </a>
-        <a
-          href={company.whatsappHref}
-          target="_blank"
-          rel="noreferrer"
-          className="btn btn-secondary h-auto min-h-12 flex-col gap-1 py-2 text-[11px]"
-        >
+        <WhatsAppLink className="btn btn-primary h-auto min-h-12 flex-col gap-1 py-2 text-[11px]">
           <MessageCircle className="h-4 w-4" />
           WhatsApp
-        </a>
-        <LeadButton className="btn btn-primary h-auto min-h-12 flex-col gap-1 py-2 text-[11px] leading-tight">
-          Получить расчёт
-        </LeadButton>
+        </WhatsAppLink>
+        <EmailLink className="btn btn-secondary h-auto min-h-12 flex-col gap-1 py-2 text-[11px]">
+          <Mail className="h-4 w-4" />
+          {t.header.email}
+        </EmailLink>
       </div>
     </div>
   );

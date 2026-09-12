@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Hero } from "@/components/Hero";
 import { Benefits } from "@/components/Benefits";
 import { Catalog } from "@/components/Catalog";
@@ -7,6 +8,12 @@ import { Clients } from "@/components/Clients";
 import { About } from "@/components/About";
 import { Contacts } from "@/components/Contacts";
 import { products } from "@/data/products";
+import { getSiteUrl } from "@/lib/site";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+  openGraph: { url: getSiteUrl() },
+};
 
 export default function HomePage() {
   return (

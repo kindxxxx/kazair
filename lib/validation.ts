@@ -16,7 +16,7 @@ export type ValidatedLead = Omit<LeadPayload, "honeypot">;
 
 export type ValidationResult =
   | { ok: true; data: ValidatedLead }
-  | { ok: false; error: string };
+  | { ok: false; error: string; silent?: boolean };
 
 function asString(value: unknown) {
   return typeof value === "string" ? value : "";
@@ -31,7 +31,7 @@ export function parseLeadPayload(input: unknown): ValidationResult {
   const honeypot = asString(body.honeypot ?? body.website).trim();
 
   if (honeypot) {
-    return { ok: false, error: "Пустой запрос" };
+    return { ok: false, error: "Пустой запрос", silent: true };
   }
 
   const name = asString(body.name).trim();

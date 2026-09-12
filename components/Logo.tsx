@@ -1,4 +1,7 @@
+"use client";
+
 import { company } from "@/data/company";
+import { useLocale } from "@/lib/i18n/locale";
 import { cn } from "@/lib/utils";
 
 export function Logo({
@@ -9,6 +12,7 @@ export function Logo({
   className?: string;
 }) {
   const light = variant === "white";
+  const { t } = useLocale();
 
   return (
     <span className={cn("flex min-w-0 items-center gap-3", className)}>
@@ -44,7 +48,7 @@ export function Logo({
             light ? "text-white/70" : "text-muted",
           )}
         >
-          {company.tagline}
+          {t.company.tagline}
         </span>
       </span>
     </span>

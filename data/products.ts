@@ -3,7 +3,7 @@ export const categories = [
     id: "screw",
     name: "Винтовые компрессоры",
     image: "/images/cat-screw.jpg",
-    cover: "/images/slide-almig.png",
+    cover: "/images/slide-almig.webp",
     intro:
       "Продажа компрессоров, компрессорного и иного оборудования, проведение шеф-монтажных и монтажных работ, проведение гарантийного и послегарантийного обслуживания.",
   },
@@ -11,7 +11,7 @@ export const categories = [
     id: "mobile",
     name: "Передвижные компрессоры",
     image: "/images/cat-mobile.jpg",
-    cover: "/images/slide-mobile.png",
+    cover: "/images/slide-mobile.webp",
     intro:
       "Мобильные/передвижные компрессоры с дизельным приводом ROTORCOMP для работы при отсутствии электроэнергии. Добыча, дорожное строительство, пескоструй и резерв стационарных установок.",
   },
@@ -19,7 +19,7 @@ export const categories = [
     id: "hp",
     name: "Компрессоры высокого давления",
     image: "/images/cat-hp.jpg",
-    cover: "/images/slide-piston.png",
+    cover: "/images/slide-piston.webp",
     intro:
       "Поршневые компрессоры высокого давления для воздуха, газа, азота и гелия. Ременные, прямой привод, с частотным преобразователем, с осушителем и Oil Free.",
   },
@@ -27,7 +27,7 @@ export const categories = [
     id: "turbo",
     name: "Центробежные (турбо) компрессоры",
     image: "/images/cat-turbo.jpg",
-    cover: "/images/slide-turbo.png",
+    cover: "/images/slide-turbo.webp",
     intro:
       "Центробежные компрессоры высокой производительности: воздушные, азотные и кислородные API 672, а также решения API 617 для нефтяной, химической и газовой промышленности.",
   },
@@ -35,7 +35,7 @@ export const categories = [
     id: "mks",
     name: "Модульные компрессорные станции",
     image: "/images/cat-mks.jpg",
-    cover: "/images/slide-mks.png",
+    cover: "/images/slide-mks.webp",
     intro:
       "Блочно-модульные компрессорные станции контейнерного типа. Не требуют капитального строительства, мобильны и работают в климате УХЛ1 от −60 °C до +45 °C.",
   },
@@ -95,7 +95,7 @@ export type CategoryName = (typeof categories)[number]["name"];
 export type Product = {
   id: string;
   name: string;
-  category: CategoryName;
+  category: string;
   categoryId: CategoryId;
   image: string;
   description: string;
@@ -109,7 +109,7 @@ export const products: Product[] = [
     name: "ALMiG — компрессоры Premium класса",
     category: "Винтовые компрессоры",
     categoryId: "screw",
-    image: "/images/slide-almig.png",
+    image: "/images/slide-almig.webp",
     description:
       "Винтовые компрессоры PREMIUM класса (Германия). Производительность 0,43–48,00 м³/мин, давление 5–13 бар.",
     body: "Компрессоры ALMiG обеспечивают производительность от 0,43 до 48,00 м³/мин при максимальном рабочем давлении от 5 до 13 бар. Системы управления: Air Control B — микропроцессорный контроль и автоматический выбор экономичного режима; Air Control P — графический дисплей, управление оборудованием других производителей и объединение в сеть.",
@@ -124,7 +124,7 @@ export const products: Product[] = [
     name: "ROTORCOMP — винтовые компрессоры",
     category: "Винтовые компрессоры",
     categoryId: "screw",
-    image: "/images/slide-rotorcomp.png",
+    image: "/images/slide-rotorcomp.webp",
     description:
       "Бюджетные винтовые компрессоры высокого качества (Китай). Производительность 0,75–104,00 м³/мин, давление 3–40 бар.",
     body: "Компрессоры ROTORCOMP подойдут предприятиям, которые ориентированы на высокое качество и надёжность, но не закупают дорогостоящее европейское или американское оборудование. Соответствуют мировым стандартам, в том числе ISO 8573-1 Klasse 0 (Oil Free). Срок эксплуатации — не менее 15 лет при своевременном сервисе.",
@@ -564,45 +564,45 @@ export const products: Product[] = [
 ];
 
 export const clients = [
-  { src: "/images/clients/client-kazcink.png", alt: "KAZ Minerals / Kazcink" },
-  { src: "/images/clients/client-1.png", alt: "Партнёр 1" },
-  { src: "/images/clients/client-2.png", alt: "Партнёр 2" },
+  { src: "/images/clients/client-kazcink.webp", alt: "KAZ Minerals / Kazcink" },
+  { src: "/images/clients/client-1.webp", alt: "Партнёр 1" },
+  { src: "/images/clients/client-2.webp", alt: "Партнёр 2" },
   { src: "/images/clients/client-3.svg", alt: "Партнёр 3" },
-  { src: "/images/clients/client-4.png", alt: "Партнёр 4" },
-  { src: "/images/clients/client-5.png", alt: "Партнёр 5" },
-  { src: "/images/clients/client-6.png", alt: "Партнёр 6" },
+  { src: "/images/clients/client-4.webp", alt: "Партнёр 4" },
+  { src: "/images/clients/client-5.webp", alt: "Партнёр 5" },
+  { src: "/images/clients/client-6.webp", alt: "Партнёр 6" },
   { src: "/images/clients/client-7.svg", alt: "Партнёр 7" },
-  { src: "/images/clients/client-8.png", alt: "Партнёр 8" },
-  { src: "/images/clients/client-10.png", alt: "Партнёр 10" },
-  { src: "/images/clients/client-11.png", alt: "Партнёр 11" },
+  { src: "/images/clients/client-8.webp", alt: "Партнёр 8" },
+  { src: "/images/clients/client-10.webp", alt: "Партнёр 10" },
+  { src: "/images/clients/client-11.webp", alt: "Партнёр 11" },
   { src: "/images/clients/client-12.svg", alt: "Партнёр 12" },
-  { src: "/images/clients/client-13.png", alt: "Партнёр 13" },
+  { src: "/images/clients/client-13.webp", alt: "Партнёр 13" },
   { src: "/images/clients/client-14.jpg", alt: "Партнёр 14" },
 ];
 
 export const heroSlides = [
   {
-    image: "/images/slide-turbo.png",
+    image: "/images/slide-turbo.webp",
     title: "Центробежные компрессоры высокой производительности",
   },
   {
-    image: "/images/slide-almig.png",
+    image: "/images/slide-almig.webp",
     title: "Винтовые компрессоры PREMIUM класса (Германия)",
   },
   {
-    image: "/images/slide-rotorcomp.png",
+    image: "/images/slide-rotorcomp.webp",
     title: "Бюджетные винтовые компрессоры высокого качества (Китай)",
   },
   {
-    image: "/images/slide-mobile.png",
+    image: "/images/slide-mobile.webp",
     title: "Передвижные/мобильные надёжные винтовые компрессоры (Китай)",
   },
   {
-    image: "/images/slide-piston.png",
+    image: "/images/slide-piston.webp",
     title: "Поршневые компрессоры высокого давления",
   },
   {
-    image: "/images/slide-mks.png",
+    image: "/images/slide-mks.webp",
     title: "Модульные компрессорные станции контейнерного типа",
   },
 ];

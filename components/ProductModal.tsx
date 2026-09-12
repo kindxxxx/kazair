@@ -11,7 +11,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import type { Product } from "@/data/products";
-import { LeadButton } from "@/components/LeadForm";
+import { WhatsAppLink } from "@/components/ContactLinks";
 
 type ProductModalContextValue = {
   openProduct: (product: Product) => void;
@@ -109,9 +109,9 @@ function ProductModal({
             ) : null}
             <p className="mt-5 text-sm font-medium text-graphite">Уточнить стоимость</p>
             <div className="mt-5 flex flex-col gap-3">
-              <LeadButton product={product.name} className="btn btn-primary">
+              <WhatsAppLink productName={product.name} className="btn btn-primary">
                 Консультация или заказ
-              </LeadButton>
+              </WhatsAppLink>
               <Link
                 href={`/catalog/${product.categoryId}/${product.id}`}
                 className="btn btn-dark"

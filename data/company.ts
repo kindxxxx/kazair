@@ -20,11 +20,10 @@ export const company = {
   phoneHref: "tel:+77017131497",
   phone2: "+7 (727) 338-49-89",
   phone2Href: "tel:+77273384989",
-  email: "kazaircompressor@mail.ru",
-  emailHref: "mailto:kazaircompressor@mail.ru",
+  email: "kazairkompressor@mail.ru",
+  emailHref: "mailto:kazairkompressor@mail.ru",
   email2: "info@kazaircomp.kz",
-  whatsappHref:
-    "https://api.whatsapp.com/send?phone=77017131497&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9D%D1%83%D0%B6%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8F%20%D0%BF%D0%BE%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%80%D0%B5%D1%81%D1%81%D0%BE%D1%80%D0%B0%D0%BC.",
+  whatsappHref: "https://wa.me/77017131497",
   hours: {
     weekdays: "Пн–Пт: 9:00–18:00",
     saturday: "Сб: по договорённости",

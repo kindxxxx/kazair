@@ -10,7 +10,7 @@ import {
   type FormEvent,
   type ReactNode,
 } from "react";
-import { COMMENT_MAX_LENGTH } from "@/lib/validation";
+import { COMMENT_MAX_LENGTH, NAME_MAX_LENGTH, PRODUCT_MAX_LENGTH } from "@/lib/validation";
 import { formatPhoneMask } from "@/lib/phone";
 import { cn } from "@/lib/utils";
 import { company } from "@/data/company";
@@ -60,9 +60,11 @@ export function LeadButton({
 export function LeadProvider({ children }: { children: ReactNode }) {
   const [open, setOpen] = useState(false);
   const [product, setProduct] = useState("");
+  const [formKey, setFormKey] = useState(0);
 
   const openLead = useCallback((next?: string) => {
     setProduct(next ?? "");
+    setFormKey((value) => value + 1);
     setOpen(true);
   }, []);
 
@@ -70,6 +72,7 @@ export function LeadProvider({ children }: { children: ReactNode }) {
     <LeadContext.Provider value={{ openLead, isLeadOpen: open }}>
       {children}
       <LeadForm
+        key={formKey}
         open={open}
         product={product}
         onProductChange={setProduct}
@@ -113,13 +116,6 @@ function LeadForm({
       window.removeEventListener("keydown", onKeyDown);
     };
   }, [open, onClose]);
-
-  useEffect(() => {
-    if (open) {
-      setStatus("idle");
-      setError("");
-    }
-  }, [open]);
 
   if (!open) return null;
 
@@ -201,6 +197,7 @@ function LeadForm({
                 required
                 name="name"
                 autoComplete="name"
+                maxLength={NAME_MAX_LENGTH}
                 placeholder="Как к вам обращаться"
                 value={name}
                 onChange={(event) => setName(event.target.value)}
@@ -223,6 +220,7 @@ function LeadForm({
               Оборудование
               <input
                 name="product"
+                maxLength={PRODUCT_MAX_LENGTH}
                 value={product}
                 placeholder="Не выбрано"
                 onChange={(event) => onProductChange(event.target.value)}

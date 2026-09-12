@@ -1,73 +1,74 @@
+"use client";
+
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { company } from "@/data/company";
 import { Reveal } from "@/components/Reveal";
-import { LeadButton } from "@/components/LeadForm";
+import { EmailLink, WhatsAppLink } from "@/components/ContactLinks";
+import { useLocale } from "@/lib/i18n/locale";
 
-export function Contacts({ compact = false }: { compact?: boolean }) {
+export function Contacts({
+  headingAs: Heading = "h2",
+}: {
+  compact?: boolean;
+  headingAs?: "h1" | "h2";
+}) {
+  const { t } = useLocale();
+
   return (
     <section id="contacts" className="scroll-mt-24 bg-paper py-16 md:py-24">
       <div className="container-site">
         <Reveal>
           <p className="text-xs font-semibold tracking-[0.18em] text-brand uppercase">
-            Наши контакты
+            {t.contacts.label}
           </p>
-          <h2 className="mt-3 font-display text-3xl md:text-4xl">Офис в Алматы</h2>
+          <Heading className="mt-3 font-display text-3xl md:text-4xl">{t.contacts.officeTitle}</Heading>
         </Reveal>
 
         <div className="mt-10 grid gap-4 lg:grid-cols-3">
           <article className="py-2">
             <MapPin className="h-5 w-5 text-brand" />
-            <h3 className="mt-4 font-display text-xl">{company.office.label}</h3>
-            <p className="mt-2 text-muted">{company.office.address}</p>
+            <h3 className="mt-4 font-display text-xl">{t.contacts.office}</h3>
+            <p className="mt-2 text-muted">{t.contacts.address}</p>
             <a
               href={company.office.mapUrl}
               target="_blank"
               rel="noreferrer"
               className="mt-4 inline-flex text-sm font-semibold text-brand"
             >
-              Открыть в 2ГИС
+              {t.contacts.open2gis}
             </a>
           </article>
           <article className="py-2">
             <Phone className="h-5 w-5 text-brand" />
-            <h3 className="mt-4 font-display text-xl">Телефоны</h3>
+            <h3 className="mt-4 font-display text-xl">{t.contacts.phones}</h3>
             <a href={company.phoneHref} className="mt-2 block font-medium">
               {company.phone}
             </a>
             <a href={company.phone2Href} className="mt-1 block font-medium">
               {company.phone2}
             </a>
-            <a href={company.emailHref} className="mt-4 flex items-center gap-2 text-sm text-muted">
-              <Mail className="h-4 w-4 text-brand" />
+            <EmailLink className="mt-4 flex items-center gap-2 text-sm font-semibold text-brand">
+              <Mail className="h-4 w-4" />
               {company.email}
-            </a>
+            </EmailLink>
           </article>
           <article className="py-2">
             <Clock className="h-5 w-5 text-brand" />
-            <h3 className="mt-4 font-display text-xl">График</h3>
+            <h3 className="mt-4 font-display text-xl">{t.contacts.hours}</h3>
             <div className="mt-2 text-sm text-muted">
-              <p>{company.hours.weekdays}</p>
-              <p>{company.hours.saturday}</p>
-              <p>{company.hours.sunday}</p>
+              <p>{t.contacts.weekdays}</p>
+              <p>{t.contacts.saturday}</p>
+              <p>{t.contacts.sunday}</p>
             </div>
           </article>
         </div>
 
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
           <a href={company.phoneHref} className="btn btn-dark">
-            Позвонить
+            {t.contacts.call}
           </a>
-          <a
-            href={company.whatsappHref}
-            target="_blank"
-            rel="noreferrer"
-            className="btn btn-primary"
-          >
-            WhatsApp
-          </a>
-          {compact ? (
-            <LeadButton className="btn btn-outline">Получить расчёт</LeadButton>
-          ) : null}
+          <WhatsAppLink className="btn btn-primary">WhatsApp</WhatsAppLink>
+          <EmailLink className="btn btn-outline">{t.header.email}</EmailLink>
         </div>
       </div>
     </section>

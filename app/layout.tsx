@@ -1,20 +1,23 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Manrope } from "next/font/google";
 import { SiteShell } from "@/components/SiteShell";
+import { JsonLd } from "@/components/JsonLd";
 import { company, seo } from "@/data/company";
-import { getSiteUrl } from "@/lib/utils";
+import { getSiteUrl } from "@/lib/site";
 import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin", "cyrillic"],
   variable: "--font-inter",
   display: "swap",
+  preload: true,
 });
 
 const manrope = Manrope({
   subsets: ["latin", "cyrillic"],
   variable: "--font-manrope",
   display: "swap",
+  preload: true,
 });
 
 const siteUrl = getSiteUrl();
@@ -27,15 +30,19 @@ export const metadata: Metadata = {
   },
   description: seo.description,
   applicationName: company.name,
-  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "ru_KZ",
-    url: siteUrl,
     siteName: company.name,
     title: seo.title,
     description: seo.description,
-    images: [{ url: "/images/hero-bg.jpg", width: 1600, height: 900, alt: company.headline }],
+    images: [{ url: "/images/hero-bg.webp", width: 1280, height: 720, alt: company.headline }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: seo.title,
+    description: seo.description,
+    images: ["/images/hero-bg.webp"],
   },
   robots: { index: true, follow: true },
   icons: { icon: "/favicon.ico" },
@@ -47,13 +54,14 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-const jsonLd = {
+const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: company.legalName,
+  alternateName: company.name,
   description: seo.description,
-  telephone: company.phone,
-  email: company.email,
+  telephone: [company.phone, company.phone2],
+  email: [company.email, company.email2],
   url: siteUrl,
   address: {
     "@type": "PostalAddress",
@@ -61,6 +69,18 @@ const jsonLd = {
     addressLocality: "Алматы",
     postalCode: "050034",
     addressCountry: "KZ",
+  },
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: company.name,
+  url: siteUrl,
+  inLanguage: "ru-KZ",
+  publisher: {
+    "@type": "Organization",
+    name: company.legalName,
   },
 };
 
@@ -72,10 +92,8 @@ export default function RootLayout({
   return (
     <html lang="ru" className={`${inter.variable} ${manrope.variable} h-full antialiased`}>
       <body className={`${inter.className} flex min-h-full flex-col bg-paper font-sans text-ink`}>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <JsonLd data={organizationJsonLd} />
+        <JsonLd data={websiteJsonLd} />
         <SiteShell>{children}</SiteShell>
       </body>
     </html>

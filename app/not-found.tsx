@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Страница не найдена",
+  robots: { index: false, follow: true },
+};
 
 export default function NotFound() {
   return (
@@ -8,9 +14,14 @@ export default function NotFound() {
       <p className="mt-3 max-w-md text-muted">
         Проверьте адрес или вернитесь в каталог компрессорного оборудования.
       </p>
-      <Link href="/catalog" className="btn btn-primary mt-8">
-        В каталог
-      </Link>
+      <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+        <Link href="/" className="btn btn-outline">
+          На главную
+        </Link>
+        <Link href="/catalog" className="btn btn-primary">
+          В каталог
+        </Link>
+      </div>
     </div>
   );
 }
