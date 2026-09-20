@@ -13,7 +13,7 @@ export const company = {
   aboutText:
     "Это современная компания, имеющая команду профессионалов, идущая в ногу со временем. На протяжении многих лет мы занимаемся продажей компрессоров, компрессорного и иного оборудования, проведением шеф-монтажных и монтажных работ, проведением гарантийного и послегарантийного обслуживания компрессоров и иного оборудования, поставляемого нашей компанией на многочисленные промышленные предприятия Республики Казахстан.",
   aboutProjects:
-    "Многолетний опыт работы и профессиональные навыки позволяют нам воплощать в жизнь проекты компрессорных станций любой сложности «под ключ»! Специалисты компании ТОО KAZaircompressor (КАЗэйркомпрессор) имеют превосходный опыт работы с компрессорами и вспомогающим оборудованием различных производителей, таких как ALMiG, Hanwha (Samsung), SeAH Engineering, Turbo-Tech, ROTORCOMP, Donaldson, Omega Air, Atlas Copco, Ingersoll Rand, Gardner Denver, FS Elliot, Boge, Kaeser, CompAre, Sullair, Hitachi, Cameron и многие другие…, что делает нас конкурентными на рынке сжатого воздуха (газов) и подготовки различных сред!",
+    "Многолетний опыт работы и профессиональные навыки позволяют нам воплощать в жизнь проекты компрессорных станций любой сложности «под ключ»! Специалисты компании ТОО KAZaircompressor (КАЗэйркомпрессор) имеют превосходный опыт работы с компрессорами и вспомогающим оборудованием различных производителей, таких как ALMiG, Hanwha (Samsung), SeAH Engineering, Turbo-Tech, SHANGHAI ROTORCOMP, Donaldson, Omega Air, Atlas Copco, Ingersoll Rand, Gardner Denver, FS Elliot, Boge, Kaeser, CompAre, Sullair, Hitachi, Cameron и многие другие…, что делает нас конкурентными на рынке сжатого воздуха (газов) и подготовки различных сред!",
   aboutSupply:
     "За годы работы мы наладили поставки компрессоров и компрессорного оборудования, запасных частей к компрессорам и расходных материалов на многие предприятия страны. Всё поставляемое нами оборудование отвечает высочайшим требованиям по надежности, долговечности и безопасности.",
   aboutIndustries:
@@ -37,7 +37,7 @@ export const company = {
     mapUrl: "https://2gis.kz/almaty/firm/70000001017305142",
   },
   brands:
-    "ALMiG, Hanwha (Samsung), SeAH Engineering, Turbo-Tech, ROTORCOMP, Donaldson, Omega Air, Atlas Copco, Ingersoll Rand, Gardner Denver, FS Elliot, Boge, Kaeser, CompAre, Sullair, Hitachi, Cameron",
+    "ALMiG, Hanwha (Samsung), SeAH Engineering, Turbo-Tech, SHANGHAI ROTORCOMP, Donaldson, Omega Air, Atlas Copco, Ingersoll Rand, Gardner Denver, FS Elliot, Boge, Kaeser, CompAre, Sullair, Hitachi, Cameron",
 } as const;
 
 export const seo = {

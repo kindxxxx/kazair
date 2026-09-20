@@ -8,7 +8,7 @@ export const categories = [
     image: categoryImages.screw,
     cover: categoryImages.screw,
     intro:
-      "ALMiG PREMIUM (Германия) и ROTORCOMP (Китай): ременный и прямой привод, частотный преобразователь, двухступенчатые, с осушителем и Oil Free. Производительность 0,43–104 м³/мин.",
+      "ALMiG PREMIUM (Германия) и SHANGHAI ROTORCOMP (Китай): ременный и прямой привод, частотный преобразователь, двухступенчатые, с осушителем и Oil Free. Производительность 0,43–104 м³/мин.",
   },
   {
     id: "mobile",
@@ -16,7 +16,7 @@ export const categories = [
     image: categoryImages.mobile,
     cover: categoryImages.mobile,
     intro:
-      "Мобильные/передвижные компрессоры с дизельным приводом ROTORCOMP: двухступенчатый винтовой блок, Deutz, Cummins, Yuchai, Caterpillar. Производительность 2,50–39,00 м³/мин, давление 6–40 бар.",
+      "Мобильные/передвижные компрессоры с дизельным приводом SHANGHAI ROTORCOMP: двухступенчатый винтовой блок, Deutz, Cummins, Yuchai, Caterpillar. Производительность 2,50–39,00 м³/мин, давление 6–40 бар.",
   },
   {
     id: "turbo",
@@ -48,7 +48,7 @@ export const categories = [
     image: categoryImages.dryers,
     cover: categoryImages.dryers,
     intro:
-      "Осушители OmegaAir и ROTORCOMP: рефрижераторные и адсорбционные с холодной или горячей регенерацией. Производительность до 1000 м³/мин, давление до 400 бар.",
+      "Осушители OmegaAir и SHANGHAI ROTORCOMP: рефрижераторные и адсорбционные с холодной или горячей регенерацией. Производительность до 1000 м³/мин, давление до 400 бар.",
   },
   {
     id: "filters",

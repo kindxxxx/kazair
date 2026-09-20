@@ -1,4 +1,5 @@
 import catalogSource from "@/data/kazaircompressor_catalog_full.json";
+import { SHANGHAI_ROTORCOMP, normalizeManufacturer } from "@/data/brands";
 import { afterTableForProduct, cardLeadByLineId } from "@/data/catalog-copy";
 import type { CategoryId, Product } from "@/data/products";
 import { catalogImages, productImageOverrides } from "@/lib/catalog-images";
@@ -101,16 +102,16 @@ const catalog = (catalogSource as { catalog: CatalogItem[] }).catalog;
 
 const LINES: LineConfig[] = [
   { index: 0, id: "almig-premium", categoryId: "screw", image: catalogImages.almig, manufacturer: "ALMiG", tableId: "almig-premium" },
-  { index: 1, id: "rotorcomp-screw", categoryId: "screw", image: catalogImages.rotorcomp, manufacturer: "ROTORCOMP", tableId: "rotorcomp-screw" },
-  { index: 2, id: "mobile-rotorcomp", categoryId: "mobile", image: catalogImages.mobile, manufacturer: "ROTORCOMP", tableId: "mobile-rotorcomp" },
+  { index: 1, id: "rotorcomp-screw", categoryId: "screw", image: catalogImages.rotorcomp, manufacturer: SHANGHAI_ROTORCOMP, tableId: "rotorcomp-screw" },
+  { index: 2, id: "mobile-rotorcomp", categoryId: "mobile", image: catalogImages.mobile, manufacturer: SHANGHAI_ROTORCOMP, tableId: "mobile-rotorcomp" },
   { index: 3, id: "turbo-oilfree", categoryId: "turbo", image: catalogImages.oilfree, tableId: "turbo-range" },
   { index: 4, id: "hp-piston", categoryId: "hp", image: catalogImages.hp },
   { index: 5, id: "mks", categoryId: "mks", image: catalogImages.mks, tableId: "mks-containers" },
   { index: 6, id: "dryer-omegaair", categoryId: "dryers", image: catalogImages.dryer1, manufacturer: "OmegaAir" },
-  { index: 6, id: "dryer-rotorcomp", categoryId: "dryers", image: catalogImages.dryer2, manufacturer: "ROTORCOMP" },
+  { index: 6, id: "dryer-rotorcomp", categoryId: "dryers", image: catalogImages.dryer2, manufacturer: SHANGHAI_ROTORCOMP },
   { index: 7, id: "filters-donaldson", categoryId: "filters", image: catalogImages.filters, manufacturer: "Donaldson" },
   { index: 7, id: "filters-omegaair", categoryId: "filters", image: catalogImages.filters, manufacturer: "OmegaAir" },
-  { index: 7, id: "filters-rotorcomp", categoryId: "filters", image: catalogImages.filters, manufacturer: "ROTORCOMP" },
+  { index: 7, id: "filters-rotorcomp", categoryId: "filters", image: catalogImages.filters, manufacturer: SHANGHAI_ROTORCOMP },
   { index: 8, id: "receivers-std", categoryId: "receivers", image: catalogImages.receiver },
   {
     index: 9,
@@ -244,7 +245,8 @@ const screwHeaders: Record<Locale, string[]> = {
 
 function manufacturersOf(item: CatalogItem): string[] {
   if (!item.manufacturer) return [];
-  return Array.isArray(item.manufacturer) ? item.manufacturer : [item.manufacturer];
+  const list = Array.isArray(item.manufacturer) ? item.manufacturer : [item.manufacturer];
+  return list.map(normalizeManufacturer);
 }
 
 function categoryName(id: CategoryId) {
@@ -326,8 +328,8 @@ function buildGeneratedTables(): SpecTable[] {
     tables.push({
       id: "rotorcomp-screw",
       caption: {
-        ru: "ROTORCOMP LGCD: модели, производительность, мощность, подключения и габариты",
-        kk: "ROTORCOMP LGCD: модельдер, өнімділік, қуат, қосылымдар және габариттер",
+        ru: "SHANGHAI ROTORCOMP LGCD: модели, производительность, мощность, подключения и габариты",
+        kk: "SHANGHAI ROTORCOMP LGCD: модельдер, өнімділік, қуат, қосылымдар және габариттер",
       },
       headers: screwHeaders,
       rows: tableRowsFromItem(rotorcomp),
@@ -337,8 +339,8 @@ function buildGeneratedTables(): SpecTable[] {
     tables.push({
       id: "mobile-rotorcomp",
       caption: {
-        ru: "Передвижные компрессоры ROTORCOMP LY: производительность, давление, двигатель и габариты",
-        kk: "ROTORCOMP LY жылжымалы компрессорлары: өнімділік, қысым, қозғалтқыш және габариттер",
+        ru: "Передвижные компрессоры SHANGHAI ROTORCOMP LY: производительность, давление, двигатель и габариты",
+        kk: "SHANGHAI ROTORCOMP LY жылжымалы компрессорлары: өнімділік, қысым, қозғалтқыш және габариттер",
       },
       headers: bilingual(
         ["Модель", "Производительность, м³/мин", "Давление, MPa", "Двигатель", "Д×Ш×В, мм"],
@@ -415,11 +417,22 @@ function generatorSpecs(kind: "n_gen" | "o_gen", notes?: CatalogNotes): Product[
   return specs;
 }
 
+function brandPositioningText(
+  positioning: Record<string, string> | undefined,
+  manufacturer: string,
+) {
+  if (!positioning) return undefined;
+  return positioning[manufacturer] ?? positioning["SHANGHAI ROTORCOMP"] ?? positioning.ROTORCOMP;
+}
+
 function bodyFromNotes(item: CatalogItem, manufacturer?: string) {
   const notes = item.notes ?? {};
   const parts: string[] = [];
-  if (manufacturer && notes.brand_positioning?.[manufacturer]) {
-    parts.push(`${manufacturer} — ${notes.brand_positioning[manufacturer]}.`);
+  const positioning = manufacturer
+    ? brandPositioningText(notes.brand_positioning, manufacturer)
+    : undefined;
+  if (manufacturer && positioning) {
+    parts.push(`${manufacturer} — ${positioning}.`);
   }
   if (notes.advantages?.length) parts.push(notes.advantages.join(". ") + ".");
   if (notes.components?.length) parts.push(`Комплектация: ${notes.components.join(", ")}.`);
@@ -453,8 +466,11 @@ function lineName(item: CatalogItem, manufacturer?: string) {
 
 function lineDescription(item: CatalogItem, lineId: string, manufacturer?: string) {
   if (cardLeadByLineId[lineId]) return cardLeadByLineId[lineId];
-  if (manufacturer && item.notes?.brand_positioning?.[manufacturer]) {
-    return `${item.description} ${manufacturer} — ${item.notes.brand_positioning[manufacturer]}.`;
+  const positioning = manufacturer
+    ? brandPositioningText(item.notes?.brand_positioning, manufacturer)
+    : undefined;
+  if (manufacturer && positioning) {
+    return `${item.description} ${manufacturer} — ${positioning}.`;
   }
   return item.description;
 }
@@ -582,10 +598,10 @@ export function buildCatalogProducts(): Product[] {
       afterTable: afterTableForProduct("oil-free"),
       specifications: [
         { label: "Тип", value: "Oil Free" },
-        { label: "Линейки", value: "ALMiG, ROTORCOMP, турбокомпрессоры" },
+        { label: "Линейки", value: "ALMiG, SHANGHAI ROTORCOMP, турбокомпрессоры" },
       ],
       manufacturer: undefined,
-      manufacturers: ["ALMiG", "ROTORCOMP"],
+      manufacturers: ["ALMiG", "SHANGHAI ROTORCOMP"],
       types: [
         "безмаслянные компрессоры (Oil Free)",
         "безмаслянные компрессоры большой производительности (с мокрым винтом и сухим винтом — Oil Free)",

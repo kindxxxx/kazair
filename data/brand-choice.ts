@@ -1,4 +1,5 @@
 import type { CategoryId, Product } from "@/data/products";
+import { SHANGHAI_ROTORCOMP } from "@/data/brands";
 import { catalogImages } from "@/lib/catalog-images";
 
 export const choiceCategoryIds: CategoryId[] = ["screw", "generators"];
@@ -14,7 +15,7 @@ export function isDualBrandCategory(id: string) {
 
 export function isDualBrandProduct(product: Product) {
   const brands = new Set(product.manufacturers ?? []);
-  return brands.has("ALMiG") && brands.has("ROTORCOMP");
+  return brands.has("ALMiG") && brands.has(SHANGHAI_ROTORCOMP);
 }
 
 export const brandChoice = {
