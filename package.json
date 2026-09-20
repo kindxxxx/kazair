@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "sync:images": "node scripts/sync-catalog-images.mjs",
     "start": "next start",
     "lint": "eslint",
     "promo": "remotion studio promo/index.ts",

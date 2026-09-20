@@ -21,8 +21,13 @@ export function isCutoutImage(_src: string) {
 export const catalogCardImageClass =
   "object-contain p-4 transition duration-500 group-hover:scale-[1.02]";
 
+function isCatalogImagePath(src: string) {
+  const path = src.split("?")[0];
+  return path.startsWith("/images/catalog/") || path.startsWith("/images/brand-");
+}
+
 export function resolveImage(src: string, categoryId?: CategoryId) {
-  if (src.startsWith("/images/catalog/") || src.startsWith("/images/brand-")) return src;
+  if (isCatalogImagePath(src)) return src;
   if (categoryId) return categoryImages[categoryId as CatalogCategoryId];
   return catalogImages.parts;
 }
@@ -48,7 +53,7 @@ export function productImage(
     (parentId ? productImageOverrides[parentId] : undefined);
 
   if (fromOverride) return fromOverride;
-  if (fallback.startsWith("/images/catalog/") || fallback.startsWith("/images/brand-")) {
+  if (isCatalogImagePath(fallback)) {
     return fallback;
   }
   if (categoryId) return categoryImages[categoryId as CatalogCategoryId];
