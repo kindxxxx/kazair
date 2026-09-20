@@ -3,25 +3,21 @@ import { company } from "@/data/company";
 import { cn } from "@/lib/utils";
 
 export function Logo({
+  variant = "color",
   className,
 }: {
   variant?: "white" | "color";
   className?: string;
 }) {
   return (
-    <span
-      className={cn(
-        "inline-flex items-center rounded-lg border-2 border-brand bg-white px-2.5 py-1 shadow-[0_0_16px_rgba(34,184,240,0.28)]",
-        className,
-      )}
-    >
+    <span data-testid="logo" className={cn("inline-flex items-center", className)}>
       <Image
-        src="/images/logo.png"
+        src={variant === "white" ? "/images/logo-white.png" : "/images/logo.png"}
         alt={company.name}
         width={1024}
         height={409}
         priority
-        className="h-10 w-auto md:h-12"
+        className="h-9 w-auto md:h-11"
       />
     </span>
   );

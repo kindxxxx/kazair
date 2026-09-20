@@ -1,20 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --navy: #003755;
-  --navy-2: #012c45;
-  --graphite: #0f1c26;
-  --graphite-2: #152430;
-  --ink: #1a2430;
-  --paper: #ffffff;
-  --mist: #f4f7fa;
-  --stone: #c9d4de;
-  --muted: #5b6b78;
-  --brand: #22b8f0;
-  --brand-dark: #065ba8;
-  --brand-navy: #003755;
-  --brand-soft: #d6eef8;
-  --header-h: 5.25rem;
+  --navy: #003355;
+  --navy-2: #01263c;
+  --graphite: #0c1820;
+  --graphite-2: #132330;
+  --ink: #15202b;
+  --paper: #f4f7fa;
+  --mist: #e8eef4;
+  --stone: #c5d2dc;
+  --muted: #5a6b78;
+  --brand: #1eb6ee;
+  --brand-dark: #0a5ea6;
+  --brand-navy: #003355;
+  --brand-soft: #d4eef8;
+  --header-h: 6.75rem;
 }
 
 @theme inline {
@@ -65,13 +65,34 @@ h3,
 
 .container-site {
   margin-inline: auto;
-  width: min(1180px, calc(100% - 2rem));
+  width: min(1240px, calc(100% - 2rem));
 }
 
 @media (min-width: 768px) {
   .container-site {
-    width: min(1180px, calc(100% - 3rem));
+    width: min(1240px, calc(100% - 3rem));
   }
+}
+
+.glass {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 18px 50px rgba(0, 18, 36, 0.28);
+  backdrop-filter: blur(18px);
+}
+
+.glass-nav {
+  isolation: isolate;
+  border-bottom: 1px solid rgba(0, 51, 85, 0.1);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 12px 40px rgba(0, 31, 51, 0.14);
+  backdrop-filter: blur(28px) saturate(1.85);
+  -webkit-backdrop-filter: blur(28px) saturate(1.85);
+}
+
+.glass-nav.is-compact {
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 12px 40px rgba(0, 31, 51, 0.18);
 }
 
 .reveal {
@@ -168,6 +189,18 @@ select:focus {
   box-shadow: 0 0 0 4px rgba(34, 184, 240, 0.16);
 }
 
+header input {
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(0, 51, 85, 0.16);
+  color: var(--navy);
+  padding-left: 2.75rem;
+  padding-right: 0.9rem;
+}
+
+header input::placeholder {
+  color: rgba(0, 51, 85, 0.45);
+}
+
 .spec-table-wrap {
   overflow-x: auto;
   border: 1px solid rgba(0, 55, 85, 0.1);
@@ -229,4 +262,27 @@ select:focus {
     opacity: 1;
     transform: none;
   }
+}
+
+.office-map .leaflet-container {
+  height: 100%;
+  width: 100%;
+  background: #dbe4ec;
+  font-family: var(--font-inter), sans-serif;
+}
+
+.office-map .leaflet-control-attribution {
+  font-size: 10px;
+  background: rgba(255, 255, 255, 0.82) !important;
+}
+
+.office-map-pin span {
+  display: block;
+  width: 28px;
+  height: 28px;
+  border-radius: 50% 50% 50% 0;
+  background: var(--brand);
+  border: 3px solid #fff;
+  box-shadow: 0 8px 20px rgba(0, 31, 51, 0.28);
+  transform: rotate(-45deg);
 }

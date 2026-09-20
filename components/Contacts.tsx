@@ -15,7 +15,7 @@ export function Contacts({
   const { t } = useLocale();
 
   return (
-    <section id="contacts" className="scroll-mt-24 bg-paper py-16 md:py-24">
+    <section id="contacts" className="scroll-mt-28 bg-paper py-16 md:py-24" data-testid="contacts">
       <div className="container-site">
         <Reveal>
           <p className="text-xs font-semibold tracking-[0.18em] text-brand uppercase">
@@ -43,9 +43,6 @@ export function Contacts({
             <h3 className="mt-4 font-display text-xl">{t.contacts.phones}</h3>
             <a href={company.phoneHref} className="mt-2 block font-medium">
               {company.phone}
-            </a>
-            <a href={company.phone2Href} className="mt-1 block font-medium">
-              {company.phone2}
             </a>
             <EmailLink className="mt-4 flex items-center gap-2 text-sm font-semibold text-brand">
               <Mail className="h-4 w-4" />

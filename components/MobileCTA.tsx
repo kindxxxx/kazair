@@ -1,8 +1,9 @@
 "use client";
 
-import { Mail, MessageCircle, Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { company } from "@/data/company";
 import { EmailLink, WhatsAppLink } from "@/components/ContactLinks";
+import { WhatsAppIcon } from "@/components/WhatsAppIcon";
 import { useLocale } from "@/lib/i18n/locale";
 
 export function MobileCTA() {
@@ -19,7 +20,7 @@ export function MobileCTA() {
           {t.header.call}
         </a>
         <WhatsAppLink className="btn btn-primary h-auto min-h-12 flex-col gap-1 py-2 text-[11px]">
-          <MessageCircle className="h-4 w-4" />
+          <WhatsAppIcon className="h-4 w-4" />
           WhatsApp
         </WhatsAppLink>
         <EmailLink className="btn btn-secondary h-auto min-h-12 flex-col gap-1 py-2 text-[11px]">

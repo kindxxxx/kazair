@@ -2,30 +2,56 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import type { Product } from "@/data/products";
+import { getTypeProducts, type Product } from "@/data/products";
+import { isDualBrandProduct } from "@/data/brand-choice";
 import { getProductArticle, type HomeList } from "@/data/home-sections";
 import { getSpecTable, localizeSpecTable } from "@/data/spec-tables";
+import { BrandChoice } from "@/components/BrandChoice";
 import { WhatsAppLink } from "@/components/ContactLinks";
 import { SpecTable } from "@/components/SpecTable";
+import { catalogCardImageClass, productImage } from "@/lib/media";
 import { localizeProduct } from "@/lib/i18n/content";
 import { useLocale } from "@/lib/i18n/locale";
 import type { Locale } from "@/lib/i18n/types";
+import { cn } from "@/lib/utils";
 
 export function ProductDetail({ product }: { product: Product }) {
   const { locale, t } = useLocale();
   const item = localizeProduct(product, locale);
   const article = getProductArticle(product);
+  const lineId = item.parentId ?? item.aliasOf ?? item.id;
+  const image = productImage(item.id, item.image, item.categoryId, lineId);
+  const typeItems = getTypeProducts(lineId);
+  const tableIds = item.tableIds ?? [];
+  const dualBrand = isDualBrandProduct(item);
+
+  if (dualBrand) {
+    return (
+      <div className="container-site">
+        <Link
+          href={`/catalog/${item.categoryId}`}
+          className="text-xs font-semibold tracking-[0.18em] text-brand uppercase"
+        >
+          {item.category}
+        </Link>
+        <h1 className="mt-3 font-display text-4xl">{item.name}</h1>
+        <p className="mt-4 max-w-3xl text-lg text-muted">{item.description}</p>
+        <p className="mt-8 text-lg text-navy">{t.catalog.chooseBrand}</p>
+        <BrandChoice oilFree={item.id === "oil-free"} />
+      </div>
+    );
+  }
 
   return (
     <div className="container-site">
       <div className="grid gap-8 lg:grid-cols-2">
-        <div className="relative aspect-[4/3] overflow-hidden">
+        <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-white ring-1 ring-navy/10">
           <Image
-            src={item.image}
+            src={image}
             alt={item.name}
             fill
             priority
-            className="object-contain p-2"
+            className={catalogCardImageClass}
             sizes="(max-width: 1024px) 100vw, 50vw"
           />
         </div>
@@ -36,6 +62,11 @@ export function ProductDetail({ product }: { product: Product }) {
           >
             {item.category}
           </Link>
+          {item.manufacturer ? (
+            <p className="mt-3 text-sm font-semibold tracking-[0.14em] text-navy/70 uppercase">
+              {t.product.manufacturer}: {item.manufacturer}
+            </p>
+          ) : null}
           <h1 className="mt-3 font-display text-4xl">{item.name}</h1>
           <p className="mt-4 text-lg text-muted">{item.description}</p>
           {item.body ? <p className="mt-4 leading-7 text-ink/80">{item.body}</p> : null}
@@ -61,6 +92,37 @@ export function ProductDetail({ product }: { product: Product }) {
         </div>
       </div>
 
+      {typeItems.length > 0 ? (
+        <div className="mt-12" data-testid="product-types">
+          <h2 className="font-display text-2xl md:text-3xl">{t.product.types}</h2>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {typeItems.map((typeProduct) => {
+              const active =
+                typeProduct.id === item.id ||
+                Boolean(item.typeName && typeProduct.typeName === item.typeName);
+              const label = typeProduct.typeName
+                ? typeProduct.typeName.charAt(0).toUpperCase() + typeProduct.typeName.slice(1)
+                : typeProduct.name;
+              return (
+                <Link
+                  key={typeProduct.id}
+                  href={`/catalog/${typeProduct.categoryId}/${typeProduct.id}`}
+                  data-testid={`product-type-${typeProduct.id}`}
+                  className={cn(
+                    "rounded-full px-4 py-2 text-sm leading-6 ring-1 transition",
+                    active
+                      ? "bg-navy text-white ring-navy"
+                      : "bg-white text-ink ring-navy/10 hover:ring-brand",
+                  )}
+                >
+                  {label}
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      ) : null}
+
       {article ? (
         <div className="mt-12">
           {article.subgroup ? (
@@ -78,11 +140,13 @@ export function ProductDetail({ product }: { product: Product }) {
               <ArticleLists lists={article.section.lists} locale={locale} />
             </>
           )}
-          {article.subgroup ? <ArticleLists lists={article.section.lists} locale={locale} /> : null}
+          {article.subgroup && item.manufacturer === "ALMiG" ? (
+            <ArticleLists lists={article.section.lists} locale={locale} />
+          ) : null}
         </div>
       ) : null}
 
-      {article?.tableIds.map((tableId) => {
+      {tableIds.map((tableId) => {
         const table = getSpecTable(tableId);
         if (!table) return null;
         const localized = localizeSpecTable(table, locale);
@@ -96,6 +160,14 @@ export function ProductDetail({ product }: { product: Product }) {
           />
         );
       })}
+
+      {item.afterTable && item.afterTable.length > 0 ? (
+        <div className="mt-10 max-w-4xl space-y-4 leading-7 text-ink/85" data-testid="after-table">
+          {item.afterTable.map((paragraph) => (
+            <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+          ))}
+        </div>
+      ) : null}
     </div>
   );
 }

@@ -3,7 +3,7 @@ import { Inter, Manrope } from "next/font/google";
 import { SiteShell } from "@/components/SiteShell";
 import { JsonLd } from "@/components/JsonLd";
 import { company, seo } from "@/data/company";
-import { getSiteUrl } from "@/lib/site";
+import { getSiteUrl, toAbsoluteUrl } from "@/lib/site";
 import "./globals.css";
 
 const inter = Inter({
@@ -45,7 +45,14 @@ export const metadata: Metadata = {
     images: ["/images/hero-bg.webp"],
   },
   robots: { index: true, follow: true },
-  icons: { icon: "/favicon.ico" },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/icon.png", type: "image/png", sizes: "1024x1024" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "1024x1024" }],
+    shortcut: "/favicon.ico",
+  },
 };
 
 export const viewport: Viewport = {
@@ -60,9 +67,16 @@ const organizationJsonLd = {
   name: company.legalName,
   alternateName: company.name,
   description: seo.description,
-  telephone: [company.phone, company.phone2],
+  telephone: [company.phone],
   email: [company.email, company.email2],
   url: siteUrl,
+  logo: {
+    "@type": "ImageObject",
+    url: toAbsoluteUrl("/images/logo-mark.png"),
+    width: 1024,
+    height: 1024,
+  },
+  image: toAbsoluteUrl("/images/logo-mark.png"),
   address: {
     "@type": "PostalAddress",
     streetAddress: "ул. Рыскулова 130 А, этаж 2, офис 1",

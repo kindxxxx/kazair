@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { Catalog } from "@/components/Catalog";
+import { EquipmentGrid } from "@/components/EquipmentGrid";
 import { JsonLd } from "@/components/JsonLd";
-import { categories, getCategory, products, type CategoryId } from "@/data/products";
+import { SectionArticle } from "@/components/SectionArticle";
+import { isChoiceCategory } from "@/data/brand-choice";
+import { getCategory, categories, type CategoryId } from "@/data/products";
 import { getSiteUrl } from "@/lib/site";
 
 type Props = {
@@ -52,15 +54,10 @@ export default async function CategoryPage({ params }: Props) {
   };
 
   return (
-    <div className="bg-paper pt-24">
+    <div className="bg-paper pt-28">
       <JsonLd data={breadcrumbJsonLd} />
-      <Catalog
-        products={products}
-        initialCategory={item.id as CategoryId}
-        syncUrl
-        title={item.name}
-        headingAs="h1"
-      />
+      {isChoiceCategory(item.id) ? null : <SectionArticle categoryId={item.id as CategoryId} />}
+      <EquipmentGrid headingAs="h2" initialCategory={item.id as CategoryId} syncUrl />
     </div>
   );
 }

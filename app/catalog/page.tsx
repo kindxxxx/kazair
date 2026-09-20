@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { Catalog } from "@/components/Catalog";
+import { EquipmentGrid } from "@/components/EquipmentGrid";
+import { parseCatalogFilter } from "@/lib/catalog-filter";
 import { JsonLd } from "@/components/JsonLd";
-import { products } from "@/data/products";
 import { getSiteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -12,7 +12,13 @@ export const metadata: Metadata = {
   openGraph: { url: "/catalog" },
 };
 
-export default function CatalogPage() {
+type Props = {
+  searchParams: Promise<{ q?: string; tier?: string; filter?: string }>;
+};
+
+export default async function CatalogPage({ searchParams }: Props) {
+  const params = await searchParams;
+  const initialFilter = parseCatalogFilter(params.filter);
   const siteUrl = getSiteUrl();
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -24,9 +30,9 @@ export default function CatalogPage() {
   };
 
   return (
-    <div className="pt-24">
+    <div className="pt-16">
       <JsonLd data={breadcrumbJsonLd} />
-      <Catalog products={products} syncUrl headingAs="h1" />
+      <EquipmentGrid headingAs="h1" initialFilter={initialFilter} syncUrl />
     </div>
   );
 }

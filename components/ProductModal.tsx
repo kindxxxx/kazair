@@ -12,6 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Product } from "@/data/products";
 import { WhatsAppLink } from "@/components/ContactLinks";
+import { catalogCardImageClass, productImage } from "@/lib/media";
 
 type ProductModalContextValue = {
   openProduct: (product: Product) => void;
@@ -62,6 +63,13 @@ function ProductModal({
 
   if (!product) return null;
 
+  const image = productImage(
+    product.id,
+    product.image,
+    product.categoryId,
+    product.parentId ?? product.aliasOf,
+  );
+
   return (
     <div
       className="fixed inset-0 z-[60] flex items-end justify-center bg-graphite/70 p-0 backdrop-blur-sm sm:items-center sm:p-6"
@@ -75,12 +83,12 @@ function ProductModal({
         onClick={(event) => event.stopPropagation()}
       >
         <div className="grid md:grid-cols-2">
-          <div className="relative min-h-56 bg-mist">
+          <div className="relative min-h-56 bg-white">
             <Image
-              src={product.image}
+              src={image}
               alt={product.name}
               fill
-              className="object-contain p-4"
+              className={catalogCardImageClass}
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>

@@ -11,6 +11,8 @@ type WhatsAppLinkProps = {
   className?: string;
   children: ReactNode;
   onClick?: AnchorHTMLAttributes<HTMLAnchorElement>["onClick"];
+  "aria-label"?: string;
+  "data-testid"?: string;
 };
 
 export function WhatsAppLink({
@@ -19,6 +21,8 @@ export function WhatsAppLink({
   className,
   children,
   onClick,
+  "aria-label": ariaLabel,
+  "data-testid": testId,
 }: WhatsAppLinkProps) {
   const { locale } = useLocale();
 
@@ -29,6 +33,8 @@ export function WhatsAppLink({
       rel="noopener noreferrer"
       className={className}
       onClick={onClick}
+      aria-label={ariaLabel}
+      data-testid={testId}
     >
       {children}
     </a>

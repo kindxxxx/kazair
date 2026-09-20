@@ -12,7 +12,7 @@ export function Footer() {
   const localizedCategories = localizeCategories(locale);
 
   return (
-    <footer className="bg-navy text-white">
+    <footer className="bg-navy text-white" data-testid="footer">
       <div className="container-site grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <Logo variant="white" />
@@ -59,9 +59,6 @@ export function Footer() {
           </p>
           <a href={company.phoneHref} className="mt-4 block font-semibold hover:text-brand">
             {company.phone}
-          </a>
-          <a href={company.phone2Href} className="mt-1 block text-sm text-white/80 hover:text-brand">
-            {company.phone2}
           </a>
           <EmailLink className="btn btn-secondary mt-4">{company.email}</EmailLink>
           <p className="mt-3 text-sm text-white/70">{t.contacts.weekdays}</p>

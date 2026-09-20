@@ -1,0 +1,1643 @@
+{
+  "source": {
+    "file": "Инфо для сайта 2024г..docx",
+    "scope": "каталог оборудования KAZaircompressor",
+    "note": "Производители и типы приведены по исходному файлу; где производитель не указан, manufacturer_status отмечен accordingly."
+  },
+  "catalog": [
+    {
+      "name": "Винтовые компрессоры — ALMiG",
+      "manufacturer": "ALMiG",
+      "types": [
+        "с ременным приводом",
+        "прямой привод",
+        "прямой привод с частотным преобразователем",
+        "двухступенчатые компрессоры",
+        "компрессоры с осушителем",
+        "компрессоры с осушителем и ресивером, плюс магистральные фильтры",
+        "безмаслянные компрессоры (Oil Free)"
+      ],
+      "table": {
+        "columns": [
+          "Модель",
+          "Тип",
+          "Производительность 8 бар, м³/мин",
+          "Производительность 10 бар, м³/мин",
+          "Производительность 13 бар, м³/мин",
+          "Мощность, кВт",
+          "Соединение",
+          "Длина, мм",
+          "Высота, мм",
+          "Ширина, мм",
+          "Вес, кг"
+        ],
+        "rows": [
+          {
+            "model": "BELT XP",
+            "type": "4",
+            "capacity_m3_min": {
+              "8_bar": "0,65",
+              "10_bar": "0,54",
+              "13_bar": "0,43"
+            },
+            "power_kw": "4",
+            "connection": "1/2\"",
+            "dimensions_mm": {
+              "length": "750",
+              "height": "955",
+              "width": "600"
+            },
+            "weight_kg": "201"
+          },
+          {
+            "model": "BELT XP",
+            "type": "6",
+            "capacity_m3_min": {
+              "8_bar": "0,78",
+              "10_bar": "0,68",
+              "13_bar": "0,58"
+            },
+            "power_kw": "5,5",
+            "connection": "1/2\"",
+            "dimensions_mm": {
+              "length": "750",
+              "height": "955",
+              "width": "600"
+            },
+            "weight_kg": "217"
+          },
+          {
+            "model": "BELT XP",
+            "type": "8",
+            "capacity_m3_min": {
+              "8_bar": "1,18",
+              "10_bar": "0,99",
+              "13_bar": "0,76"
+            },
+            "power_kw": "7,5",
+            "connection": "3/4\"",
+            "dimensions_mm": {
+              "length": "800",
+              "height": "1100",
+              "width": "670"
+            },
+            "weight_kg": "275"
+          },
+          {
+            "model": "BELT XP",
+            "type": "11",
+            "capacity_m3_min": {
+              "8_bar": "1,70",
+              "10_bar": "1,55",
+              "13_bar": "1,30"
+            },
+            "power_kw": "11",
+            "connection": "3/4\"",
+            "dimensions_mm": {
+              "length": "800",
+              "height": "1100",
+              "width": "670"
+            },
+            "weight_kg": "285"
+          },
+          {
+            "model": "BELT XP",
+            "type": "15",
+            "capacity_m3_min": {
+              "8_bar": "2,21",
+              "10_bar": "1,95",
+              "13_bar": "1,68"
+            },
+            "power_kw": "15",
+            "connection": "3/4\"",
+            "dimensions_mm": {
+              "length": "800",
+              "height": "1100",
+              "width": "670"
+            },
+            "weight_kg": "370"
+          },
+          {
+            "model": "BELT XP",
+            "type": "16",
+            "capacity_m3_min": {
+              "8_bar": "2,40",
+              "10_bar": "2,10",
+              "13_bar": "1,66"
+            },
+            "power_kw": "15",
+            "connection": "1\"",
+            "dimensions_mm": {
+              "length": "1250",
+              "height": "880",
+              "width": "1515"
+            },
+            "weight_kg": "610"
+          },
+          {
+            "model": "BELT XP",
+            "type": "18",
+            "capacity_m3_min": {
+              "8_bar": "3,00",
+              "10_bar": "2,70",
+              "13_bar": "2,20"
+            },
+            "power_kw": "18,5",
+            "connection": "1\"",
+            "dimensions_mm": {
+              "length": "1250",
+              "height": "880",
+              "width": "1515"
+            },
+            "weight_kg": "653"
+          },
+          {
+            "model": "BELT XP",
+            "type": "22",
+            "capacity_m3_min": {
+              "8_bar": "3,70",
+              "10_bar": "3,20",
+              "13_bar": "2,62"
+            },
+            "power_kw": "22",
+            "connection": "1\"",
+            "dimensions_mm": {
+              "length": "1250",
+              "height": "880",
+              "width": "1515"
+            },
+            "weight_kg": "681"
+          },
+          {
+            "model": "BELT XP",
+            "type": "30",
+            "capacity_m3_min": {
+              "8_bar": "5,20",
+              "10_bar": "4,50",
+              "13_bar": "3,86"
+            },
+            "power_kw": "30",
+            "connection": "1 1/2\"",
+            "dimensions_mm": {
+              "length": "1350",
+              "height": "940",
+              "width": "1680"
+            },
+            "weight_kg": "857"
+          },
+          {
+            "model": "BELT XP",
+            "type": "37",
+            "capacity_m3_min": {
+              "8_bar": "6,30",
+              "10_bar": "5,50",
+              "13_bar": "4,70"
+            },
+            "power_kw": "37",
+            "connection": "1 1/2\"",
+            "dimensions_mm": {
+              "length": "1350",
+              "height": "940",
+              "width": "1680"
+            },
+            "weight_kg": "895"
+          },
+          {
+            "model": "GEAR XP",
+            "type": "45",
+            "capacity_m3_min": {
+              "8_bar": "7.70",
+              "10_bar": "7.02",
+              "13_bar": "5.92"
+            },
+            "power_kw": "45",
+            "connection": "2\"",
+            "dimensions_mm": {
+              "length": "2000",
+              "height": "1250",
+              "width": "1750"
+            },
+            "weight_kg": "1555"
+          },
+          {
+            "model": "GEAR XP",
+            "type": "55",
+            "capacity_m3_min": {
+              "8_bar": "9.60",
+              "10_bar": "8.40",
+              "13_bar": "7.19"
+            },
+            "power_kw": "55",
+            "connection": "2\"",
+            "dimensions_mm": {
+              "length": "2000",
+              "height": "1250",
+              "width": "1750"
+            },
+            "weight_kg": "1640"
+          },
+          {
+            "model": "GEAR XP",
+            "type": "75",
+            "capacity_m3_min": {
+              "8_bar": "12.80",
+              "10_bar": "11.80",
+              "13_bar": "10.20"
+            },
+            "power_kw": "75",
+            "connection": "2\"",
+            "dimensions_mm": {
+              "length": "2180",
+              "height": "1330",
+              "width": "1850"
+            },
+            "weight_kg": "2025"
+          },
+          {
+            "model": "GEAR XP",
+            "type": "90",
+            "capacity_m3_min": {
+              "8_bar": "15.30",
+              "10_bar": "13.80",
+              "13_bar": "11.80"
+            },
+            "power_kw": "90",
+            "connection": "2\"",
+            "dimensions_mm": {
+              "length": "2180",
+              "height": "1330",
+              "width": "1850"
+            },
+            "weight_kg": "2120"
+          },
+          {
+            "model": "GEAR XP",
+            "type": "110",
+            "capacity_m3_min": {
+              "8_bar": "20.00",
+              "10_bar": "17.00",
+              "13_bar": "14.70"
+            },
+            "power_kw": "110",
+            "connection": "Dn 80",
+            "dimensions_mm": {
+              "length": "2940",
+              "height": "1710",
+              "width": "1825"
+            },
+            "weight_kg": "3000"
+          },
+          {
+            "model": "GEAR XP",
+            "type": "132",
+            "capacity_m3_min": {
+              "8_bar": "23.20",
+              "10_bar": "21.00",
+              "13_bar": "17.36"
+            },
+            "power_kw": "132",
+            "connection": "Dn 80",
+            "dimensions_mm": {
+              "length": "2940",
+              "height": "1710",
+              "width": "1825"
+            },
+            "weight_kg": "3500"
+          },
+          {
+            "model": "GEAR XP",
+            "type": "160",
+            "capacity_m3_min": {
+              "8_bar": "27.90",
+              "10_bar": "24.60",
+              "13_bar": "21.00"
+            },
+            "power_kw": "160",
+            "connection": "Dn 100",
+            "dimensions_mm": {
+              "length": "3300",
+              "height": "1860",
+              "width": "2145"
+            },
+            "weight_kg": "3700"
+          },
+          {
+            "model": "GEAR XP",
+            "type": "200",
+            "capacity_m3_min": {
+              "8_bar": "33.00",
+              "10_bar": "30.20",
+              "13_bar": "25.05"
+            },
+            "power_kw": "200",
+            "connection": "Dn 100",
+            "dimensions_mm": {
+              "length": "3300",
+              "height": "1860",
+              "width": "2145"
+            },
+            "weight_kg": "3750"
+          },
+          {
+            "model": "DIRECT XP",
+            "type": "280",
+            "capacity_m3_min": {
+              "8_bar": "48.30",
+              "10_bar": "0.00",
+              "13_bar": "0.00"
+            },
+            "power_kw": "315",
+            "connection": "Dn 100",
+            "dimensions_mm": {
+              "length": "3400",
+              "height": "1650",
+              "width": "2025"
+            },
+            "weight_kg": "4300"
+          },
+          {
+            "model": "DIRECT XP",
+            "type": "315W",
+            "capacity_m3_min": {
+              "8_bar": "0.00",
+              "10_bar": "48.00",
+              "13_bar": "0.00"
+            },
+            "power_kw": "315",
+            "connection": "Dn 100",
+            "dimensions_mm": {
+              "length": "3400",
+              "height": "1650",
+              "width": "2025"
+            },
+            "weight_kg": "4400"
+          }
+        ]
+      },
+      "description": "В PREMIUM линейке ALMiG, предлагаемые компанией ТОО KAZaircompressor (КАЗэйркомпрессор), имеются разные типы компрессоров:",
+      "notes": {
+        "performance_range_m3_min": "0,43–48,00",
+        "max_working_pressure_bar": "5–13",
+        "service_life": "до 15 лет и выше при правильной эксплуатации",
+        "cta": "Наши специалисты всегда готовы помочь Вам в подборе, а также предоставить максимально полную информацию и консультацию о любом оборудовании компании ТОО KAZaircompressor (КАЗэйркомпрессор)!"
+      }
+    },
+    {
+      "name": "Винтовые компрессоры — ROTORCOMP",
+      "manufacturer": "ROTORCOMP",
+      "types": [
+        "ременные",
+        "прямой привод",
+        "прямой привод с частотным преобразователем",
+        "прямой привод с давлением до 40 бар",
+        "двухступенчатые компрессоры",
+        "компрессоры с осушителем",
+        "компрессоры с осушителем и ресивером, плюс магистральные фильтры",
+        "безмаслянные компрессоры большой производительности (с мокрым винтом и сухим винтом — Oil Free)"
+      ],
+      "table": {
+        "columns": [
+          "Модель",
+          "Тип",
+          "Производительность 8 бар, м³/мин",
+          "Производительность 10 бар, м³/мин",
+          "Производительность 13 бар, м³/мин",
+          "Мощность, кВт",
+          "Соединение",
+          "Длина, мм",
+          "Высота, мм",
+          "Ширина, мм",
+          "Вес, кг"
+        ],
+        "rows": [
+          {
+            "model": "LGCD",
+            "type": "7,5",
+            "capacity_m3_min": {
+              "8_bar": "1,15",
+              "10_bar": "1,00",
+              "13_bar": "0,75"
+            },
+            "power_kw": "7,5",
+            "connection": "3/4\"",
+            "dimensions_mm": {
+              "length": "800",
+              "height": "700",
+              "width": "930"
+            },
+            "weight_kg": "320"
+          },
+          {
+            "model": "LGCD",
+            "type": "11",
+            "capacity_m3_min": {
+              "8_bar": "1,65",
+              "10_bar": "1,50",
+              "13_bar": "1,15"
+            },
+            "power_kw": "11",
+            "connection": "3/4\"",
+            "dimensions_mm": {
+              "length": "1080",
+              "height": "750",
+              "width": "1000"
+            },
+            "weight_kg": "340"
+          },
+          {
+            "model": "LGCD",
+            "type": "15",
+            "capacity_m3_min": {
+              "8_bar": "2,30",
+              "10_bar": "2,05",
+              "13_bar": "1,65"
+            },
+            "power_kw": "15",
+            "connection": "G1\"",
+            "dimensions_mm": {
+              "length": "1080",
+              "height": "750",
+              "width": "1000"
+            },
+            "weight_kg": "360"
+          },
+          {
+            "model": "LGCD",
+            "type": "18,5",
+            "capacity_m3_min": {
+              "8_bar": "3,00",
+              "10_bar": "2,60",
+              "13_bar": "2,10"
+            },
+            "power_kw": "18,5",
+            "connection": "G1\"",
+            "dimensions_mm": {
+              "length": "1310",
+              "height": "850",
+              "width": "1160"
+            },
+            "weight_kg": "450"
+          },
+          {
+            "model": "LGCD",
+            "type": "22",
+            "capacity_m3_min": {
+              "8_bar": "3,60",
+              "10_bar": "3,20",
+              "13_bar": "2,75"
+            },
+            "power_kw": "22",
+            "connection": "G1\"",
+            "dimensions_mm": {
+              "length": "1310",
+              "height": "850",
+              "width": "1160"
+            },
+            "weight_kg": "470"
+          },
+          {
+            "model": "LGCD",
+            "type": "30",
+            "capacity_m3_min": {
+              "8_bar": "5,00",
+              "10_bar": "4,50",
+              "13_bar": "3,70"
+            },
+            "power_kw": "30",
+            "connection": "G1 1/2\"",
+            "dimensions_mm": {
+              "length": "1500",
+              "height": "1000",
+              "width": "1320"
+            },
+            "weight_kg": "780"
+          },
+          {
+            "model": "LGCD",
+            "type": "37",
+            "capacity_m3_min": {
+              "8_bar": "6,60",
+              "10_bar": "5,80",
+              "13_bar": "4,80"
+            },
+            "power_kw": "37",
+            "connection": "G1 1/2\"",
+            "dimensions_mm": {
+              "length": "1500",
+              "height": "1000",
+              "width": "1320"
+            },
+            "weight_kg": "830"
+          },
+          {
+            "model": "LGCD",
+            "type": "45",
+            "capacity_m3_min": {
+              "8_bar": "7,60",
+              "10_bar": "7,00",
+              "13_bar": "5,80"
+            },
+            "power_kw": "45",
+            "connection": "G1 1/2\"",
+            "dimensions_mm": {
+              "length": "1500",
+              "height": "1000",
+              "width": "1320"
+            },
+            "weight_kg": "900"
+          },
+          {
+            "model": "LGCD",
+            "type": "55",
+            "capacity_m3_min": {
+              "8_bar": "10,00",
+              "10_bar": "9,00",
+              "13_bar": "7,80"
+            },
+            "power_kw": "55",
+            "connection": "G2\"",
+            "dimensions_mm": {
+              "length": "1750",
+              "height": "1200",
+              "width": "1500"
+            },
+            "weight_kg": "1180"
+          },
+          {
+            "model": "LGCD",
+            "type": "75",
+            "capacity_m3_min": {
+              "8_bar": "13,00",
+              "10_bar": "11,50",
+              "13_bar": "9,80"
+            },
+            "power_kw": "75",
+            "connection": "G2\"",
+            "dimensions_mm": {
+              "length": "1750",
+              "height": "1200",
+              "width": "1500"
+            },
+            "weight_kg": "1340"
+          },
+          {
+            "model": "LGCD",
+            "type": "90",
+            "capacity_m3_min": {
+              "8_bar": "15,30",
+              "10_bar": "14,00",
+              "13_bar": "12,00"
+            },
+            "power_kw": "90",
+            "connection": "DN80",
+            "dimensions_mm": {
+              "length": "1750",
+              "height": "1200",
+              "width": "1500"
+            },
+            "weight_kg": "1850"
+          },
+          {
+            "model": "LGCD",
+            "type": "110",
+            "capacity_m3_min": {
+              "8_bar": "20,50",
+              "10_bar": "17,50",
+              "13_bar": "14,50"
+            },
+            "power_kw": "110",
+            "connection": "DN80",
+            "dimensions_mm": {
+              "length": "2350",
+              "height": "1500",
+              "width": "1760"
+            },
+            "weight_kg": "2200"
+          },
+          {
+            "model": "LGCD",
+            "type": "132",
+            "capacity_m3_min": {
+              "8_bar": "23,50",
+              "10_bar": "21,00",
+              "13_bar": "17,50"
+            },
+            "power_kw": "132",
+            "connection": "DN80",
+            "dimensions_mm": {
+              "length": "2350",
+              "height": "1500",
+              "width": "1760"
+            },
+            "weight_kg": "2260"
+          },
+          {
+            "model": "LGCD",
+            "type": "160",
+            "capacity_m3_min": {
+              "8_bar": "28,00",
+              "10_bar": "26,00",
+              "13_bar": "22,00"
+            },
+            "power_kw": "160",
+            "connection": "DN80",
+            "dimensions_mm": {
+              "length": "2650",
+              "height": "1650",
+              "width": "1800"
+            },
+            "weight_kg": "3300"
+          },
+          {
+            "model": "LGCD",
+            "type": "200",
+            "capacity_m3_min": {
+              "8_bar": "36,00",
+              "10_bar": "33,00",
+              "13_bar": "25,00"
+            },
+            "power_kw": "200",
+            "connection": "DN100",
+            "dimensions_mm": {
+              "length": "2650",
+              "height": "1650",
+              "width": "1800"
+            },
+            "weight_kg": "3860"
+          },
+          {
+            "model": "LGCD",
+            "type": "250",
+            "capacity_m3_min": {
+              "8_bar": "45,00",
+              "10_bar": "40,00",
+              "13_bar": "36,00"
+            },
+            "power_kw": "250",
+            "connection": "DN100",
+            "dimensions_mm": {
+              "length": "3000",
+              "height": "1950",
+              "width": "1850"
+            },
+            "weight_kg": "5700"
+          },
+          {
+            "model": "LGCD",
+            "type": "280",
+            "capacity_m3_min": {
+              "8_bar": "49,20",
+              "10_bar": "45,00",
+              "13_bar": "41,30"
+            },
+            "power_kw": "280",
+            "connection": "DN100",
+            "dimensions_mm": {
+              "length": "3000",
+              "height": "1950",
+              "width": "1850"
+            },
+            "weight_kg": "5900"
+          },
+          {
+            "model": "LGCD",
+            "type": "315",
+            "capacity_m3_min": {
+              "8_bar": "56,50",
+              "10_bar": "50,50",
+              "13_bar": "45,00"
+            },
+            "power_kw": "315",
+            "connection": "DN100",
+            "dimensions_mm": {
+              "length": "3000",
+              "height": "1950",
+              "width": "1850"
+            },
+            "weight_kg": "6800"
+          },
+          {
+            "model": "LGCD",
+            "type": "355",
+            "capacity_m3_min": {
+              "8_bar": "64,60",
+              "10_bar": "55,50",
+              "13_bar": "46,50"
+            },
+            "power_kw": "355",
+            "connection": "DN125",
+            "dimensions_mm": {
+              "length": "5000",
+              "height": "2050",
+              "width": "2200"
+            },
+            "weight_kg": "8500"
+          },
+          {
+            "model": "LGCD",
+            "type": "450",
+            "capacity_m3_min": {
+              "8_bar": "86,00",
+              "10_bar": "73,50",
+              "13_bar": "……."
+            },
+            "power_kw": "450",
+            "connection": "DN150",
+            "dimensions_mm": {
+              "length": "4500",
+              "height": "2500",
+              "width": "2200"
+            },
+            "weight_kg": "12500"
+          },
+          {
+            "model": "LGCD",
+            "type": "500",
+            "capacity_m3_min": {
+              "8_bar": "95,00",
+              "10_bar": "85,00",
+              "13_bar": "……."
+            },
+            "power_kw": "500",
+            "connection": "DN150",
+            "dimensions_mm": {
+              "length": "4500",
+              "height": "2500",
+              "width": "2200"
+            },
+            "weight_kg": "12900"
+          },
+          {
+            "model": "LGCD",
+            "type": "560",
+            "capacity_m3_min": {
+              "8_bar": "104,00",
+              "10_bar": "90,50",
+              "13_bar": "……."
+            },
+            "power_kw": "560",
+            "connection": "DN150",
+            "dimensions_mm": {
+              "length": "4500",
+              "height": "2500",
+              "width": "2200"
+            },
+            "weight_kg": "13500"
+          }
+        ]
+      },
+      "description": "Надёжные компрессоры ROTORCOMP, предлагаемые компанией ТОО KAZaircompressor (КАЗэйркомпрессор), представлены следующими типами компрессоров:",
+      "notes": {
+        "performance_range_m3_min": "0,75–104,00",
+        "max_working_pressure_bar": "3–40",
+        "service_life": "не менее 15 лет при своевременном сервисном обслуживании",
+        "cta": "Наши специалисты всегда готовы помочь Вам в подборе, а также предоставить максимально полную информацию и консультацию о любом оборудовании компании ТОО KAZaircompressor (КАЗэйркомпрессор)!"
+      }
+    },
+    {
+      "name": "Передвижные / мобильные компрессоры (с дизельным приводом)",
+      "manufacturer": "ROTORCOMP",
+      "types": [
+        "двухступенчатый винтовой блок",
+        "прямой привод",
+        "прямой привод с частотным преобразователем"
+      ],
+      "table": {
+        "columns": [
+          "Модель",
+          "Производительность, м³/мин",
+          "Давление, MPa",
+          "Двигатель",
+          "Д×Ш×В, мм"
+        ],
+        "rows": [
+          {
+            "model": "*LY-6/7",
+            "capacity_m3_min": "6",
+            "pressure_mpa": "0.7",
+            "engine": "XICHAI-75HP",
+            "dimensions_mm": "3750×1920×1700"
+          },
+          {
+            "model": "*LY-6/8",
+            "capacity_m3_min": "6",
+            "pressure_mpa": "0.8",
+            "engine": "CUMMINS-80HP",
+            "dimensions_mm": "3900×1920×1700"
+          },
+          {
+            "model": "*LY-9/8",
+            "capacity_m3_min": "9",
+            "pressure_mpa": "0.8",
+            "engine": "CUMMINS-125HP",
+            "dimensions_mm": "3900×1920×1700"
+          },
+          {
+            "model": "*LY-12/10",
+            "capacity_m3_min": "12",
+            "pressure_mpa": "1",
+            "engine": "CUMMINS-150HP",
+            "dimensions_mm": "3900×1920×1900"
+          },
+          {
+            "model": "*LY-11/14,5",
+            "capacity_m3_min": "11",
+            "pressure_mpa": "1.45",
+            "engine": "CUMMINS-150HP",
+            "dimensions_mm": "3900×1920×1900"
+          },
+          {
+            "model": "*LY-12,5/14",
+            "capacity_m3_min": "12,5",
+            "pressure_mpa": "1.4",
+            "engine": "CUMMINS-180HP",
+            "dimensions_mm": "3900×1980×1900"
+          },
+          {
+            "model": "*LY-15/13",
+            "capacity_m3_min": "15",
+            "pressure_mpa": "1.3",
+            "engine": "CUMMINS-180HP",
+            "dimensions_mm": "4000×1980×1900"
+          },
+          {
+            "model": "*LY-15/15",
+            "capacity_m3_min": "15",
+            "pressure_mpa": "1.5",
+            "engine": "CUMMINS-180HP",
+            "dimensions_mm": "4080×1980×2350"
+          },
+          {
+            "model": "*LY-17/15",
+            "capacity_m3_min": "17",
+            "pressure_mpa": "1.5",
+            "engine": "CUMMINS-180HP",
+            "dimensions_mm": "4080×1980×2350"
+          },
+          {
+            "model": "*LY-15/18",
+            "capacity_m3_min": "15",
+            "pressure_mpa": "1.8",
+            "engine": "CUMMINS-210HP",
+            "dimensions_mm": "4080×1980×2350"
+          },
+          {
+            "model": "*LY-17/14",
+            "capacity_m3_min": "17",
+            "pressure_mpa": "1.4",
+            "engine": "CUMMINS-210HP",
+            "dimensions_mm": "4080×1980×2350"
+          },
+          {
+            "model": "*LY-17/18",
+            "capacity_m3_min": "17",
+            "pressure_mpa": "1.8",
+            "engine": "CUMMINS-210HP",
+            "dimensions_mm": "4080×1980×2350"
+          },
+          {
+            "model": "*LY-18/15",
+            "capacity_m3_min": "18",
+            "pressure_mpa": "1.5",
+            "engine": "CUMMINS-210HP",
+            "dimensions_mm": "4080×1980×2350"
+          },
+          {
+            "model": "LY-18/20",
+            "capacity_m3_min": "18",
+            "pressure_mpa": "2.0",
+            "engine": "CUMMINS-260HP",
+            "dimensions_mm": "3450×1520×2220"
+          },
+          {
+            "model": "LY-19/17",
+            "capacity_m3_min": "19",
+            "pressure_mpa": "1.7",
+            "engine": "CUMMINS-260HP",
+            "dimensions_mm": "3450×1520×2220"
+          },
+          {
+            "model": "LY-19/21",
+            "capacity_m3_min": "19",
+            "pressure_mpa": "2.1",
+            "engine": "CUMMINS-260HP",
+            "dimensions_mm": "3380×1650×2500"
+          },
+          {
+            "model": "LY-21/18",
+            "capacity_m3_min": "21",
+            "pressure_mpa": "1.8",
+            "engine": "CUMMINS-260HP",
+            "dimensions_mm": "3380×1650×2500"
+          },
+          {
+            "model": "LY-22/8",
+            "capacity_m3_min": "22",
+            "pressure_mpa": "0.8",
+            "engine": "CUMMINS-260HP",
+            "dimensions_mm": "3380×1640×2350"
+          },
+          {
+            "model": "LY-30/8",
+            "capacity_m3_min": "30",
+            "pressure_mpa": "0.8",
+            "engine": "CUMMINS-260HP",
+            "dimensions_mm": "3780×1980×2350"
+          },
+          {
+            "model": "LY-25/10",
+            "capacity_m3_min": "25",
+            "pressure_mpa": "1.0",
+            "engine": "CUMMINS-260HP",
+            "dimensions_mm": "3980×1800×2450"
+          },
+          {
+            "model": "LY-21/13",
+            "capacity_m3_min": "21",
+            "pressure_mpa": "1.3",
+            "engine": "CUMMINS-260HP",
+            "dimensions_mm": "3980×1800×2450"
+          },
+          {
+            "model": "LY-23/23",
+            "capacity_m3_min": "23",
+            "pressure_mpa": "2.3",
+            "engine": "CUMMINS-360HP",
+            "dimensions_mm": "3980×1800×2450"
+          },
+          {
+            "model": "LY-25/18",
+            "capacity_m3_min": "25",
+            "pressure_mpa": "1.8",
+            "engine": "CUMMINS-360HP",
+            "dimensions_mm": "4580×1950×2600"
+          },
+          {
+            "model": "LY-27/10",
+            "capacity_m3_min": "27",
+            "pressure_mpa": "1.0",
+            "engine": "CUMMINS-3250HP",
+            "dimensions_mm": "4580×1950×2600"
+          },
+          {
+            "model": "LY-25/23",
+            "capacity_m3_min": "25",
+            "pressure_mpa": "2.3",
+            "engine": "CUMMINS-360HP",
+            "dimensions_mm": "4580×1950×2600"
+          },
+          {
+            "model": "LY-27/18",
+            "capacity_m3_min": "27",
+            "pressure_mpa": "1.8",
+            "engine": "CUMMINS-360HP",
+            "dimensions_mm": "4600×1950×2850"
+          },
+          {
+            "model": "LY-35/25",
+            "capacity_m3_min": "35",
+            "pressure_mpa": "2.5",
+            "engine": "CUMMINS-550HP",
+            "dimensions_mm": "4600×1950×2850"
+          },
+          {
+            "model": "LY-38/20",
+            "capacity_m3_min": "38",
+            "pressure_mpa": "2.0",
+            "engine": "CUMMINS-550HP",
+            "dimensions_mm": "3980×1800×2100"
+          },
+          {
+            "model": "LY-26/25",
+            "capacity_m3_min": "26",
+            "pressure_mpa": "2.5",
+            "engine": "CUMMINS-550HP",
+            "dimensions_mm": "3980×1800×2650"
+          },
+          {
+            "model": "LY-36/30",
+            "capacity_m3_min": "36",
+            "pressure_mpa": "3.0",
+            "engine": "CUMMINS-550HP",
+            "dimensions_mm": "3980×1800×2650"
+          },
+          {
+            "model": "LY-41/20",
+            "capacity_m3_min": "41",
+            "pressure_mpa": "2.0",
+            "engine": "CUMMINS-550HP",
+            "dimensions_mm": "4600×1950×2850"
+          },
+          {
+            "model": "LY-30/35",
+            "capacity_m3_min": "30",
+            "pressure_mpa": "3.5",
+            "engine": "CUMMINS-550HP",
+            "dimensions_mm": "4600×1950×2850"
+          },
+          {
+            "model": "LY-35/25",
+            "capacity_m3_min": "35",
+            "pressure_mpa": "2.5",
+            "engine": "CUMMINS-550HP",
+            "dimensions_mm": "4600×1950×2850"
+          },
+          {
+            "model": "LY-33/35",
+            "capacity_m3_min": "33",
+            "pressure_mpa": "3.5",
+            "engine": "KTA19-P700",
+            "dimensions_mm": "4600×1950×2850"
+          },
+          {
+            "model": "LY-39/25",
+            "capacity_m3_min": "39",
+            "pressure_mpa": "2.5",
+            "engine": "CAT C-18 ASERT",
+            "dimensions_mm": "4600×1950×2850"
+          },
+          {
+            "model": "LY-43/25",
+            "capacity_m3_min": "43",
+            "pressure_mpa": "2.5",
+            "engine": "YUCAI-775HP",
+            "dimensions_mm": "4700×2100×2850"
+          },
+          {
+            "model": "LY-37/35",
+            "capacity_m3_min": "37",
+            "pressure_mpa": "3.5",
+            "engine": "YUCAI-775HP",
+            "dimensions_mm": "4700×2100×2850"
+          }
+        ]
+      },
+      "description": "Мобильные/передвижные компрессоры с дизельным приводом ROTORCOMP, предлагаемые компанией ТОО KAZaircompressor (КАЗэйркомпрессор), представлены в следующей комплектации:",
+      "notes": {
+        "engines": [
+          "Deutz",
+          "Cummins",
+          "Yuchai",
+          "Caterpillar",
+          "и другие"
+        ],
+        "components": [
+          "подшипники SKF",
+          "современная система управления",
+          "электроника Shnider"
+        ],
+        "cta": "Наши специалисты всегда готовы помочь Вам в подборе, а также предоставить максимально полную информацию и консультацию о любом оборудовании компании ТОО KAZaircompressor (КАЗэйркомпрессор)!"
+      }
+    },
+    {
+      "name": "Центробежные (турбо) компрессоры",
+      "manufacturer": [],
+      "types": [
+        "воздушные API 672",
+        "азотные (N2) API 672",
+        "кислородные (O2) компрессоры API 672",
+        "осевые, центробежные компрессоры и детандер-компрессоры для нефтяной, химической и газовой промышленности API 617"
+      ],
+      "table": null,
+      "description": "Центробежные (турбо) компрессоры — Oil Free, предлагаемые компанией ТОО KAZaircompressor (КАЗэйркомпрессор), представлены следующими типами оборудования:",
+      "notes": {
+        "oil_free": true,
+        "capacity_m3_hour": "до 600 000 и более",
+        "pressure_bar": "до 80",
+        "service_life": "средний срок эксплуатации до 30 лет при правильной эксплуатации и своевременном сервисном обслуживании",
+        "advantages": [
+          "всегда безмаслянный воздух (Oil Free)",
+          "степень надёжности авиационного строения",
+          "простота в эксплуатации",
+          "легкость в сервисном обслуживании",
+          "минимальные затраты на электроэнергию и сервис в сравнении с другими типами компрессорного оборудования"
+        ],
+        "chart_table_raw": [
+          [
+            "Давление, (бар)",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          [
+            "Давление, (бар)",
+            "80",
+            "",
+            "",
+            "8500",
+            "15000",
+            "20000",
+            "25000",
+            "41000",
+            "60000",
+            "600000",
+            ""
+          ],
+          [
+            "Давление, (бар)",
+            "",
+            "",
+            "",
+            "8500",
+            "15000",
+            "20000",
+            "25000",
+            "41000",
+            "60000",
+            "600000",
+            ""
+          ],
+          [
+            "Давление, (бар)",
+            "",
+            "",
+            "",
+            "8500",
+            "15000",
+            "20000",
+            "25000",
+            "41000",
+            "60000",
+            "600000",
+            ""
+          ],
+          [
+            "Давление, (бар)",
+            "",
+            "",
+            "",
+            "8500",
+            "15000",
+            "20000",
+            "25000",
+            "41000",
+            "60000",
+            "600000",
+            ""
+          ],
+          [
+            "Давление, (бар)",
+            "",
+            "",
+            "",
+            "8500",
+            "15000",
+            "20000",
+            "25000",
+            "41000",
+            "60000",
+            "600000",
+            ""
+          ],
+          [
+            "Давление, (бар)",
+            "25",
+            "",
+            "5500",
+            "8500",
+            "15000",
+            "20000",
+            "25000",
+            "41000",
+            "60000",
+            "600000",
+            ""
+          ],
+          [
+            "Давление, (бар)",
+            "",
+            "",
+            "5500",
+            "8500",
+            "15000",
+            "20000",
+            "25000",
+            "41000",
+            "60000",
+            "600000",
+            ""
+          ],
+          [
+            "Давление, (бар)",
+            "",
+            "",
+            "5500",
+            "8500",
+            "15000",
+            "20000",
+            "25000",
+            "41000",
+            "60000",
+            "600000",
+            ""
+          ],
+          [
+            "Давление, (бар)",
+            "",
+            "2000",
+            "5500",
+            "8500",
+            "15000",
+            "20000",
+            "25000",
+            "41000",
+            "60000",
+            "600000",
+            ""
+          ],
+          [
+            "Давление, (бар)",
+            "",
+            "2000",
+            "5500",
+            "8500",
+            "15000",
+            "20000",
+            "25000",
+            "41000",
+            "60000",
+            "600000",
+            ""
+          ],
+          [
+            "Давление, (бар)",
+            "",
+            "2000",
+            "5500",
+            "8500",
+            "15000",
+            "20000",
+            "25000",
+            "41000",
+            "60000",
+            "600000",
+            ""
+          ],
+          [
+            "Давление, (бар)",
+            "0,8",
+            "2000",
+            "5500",
+            "8500",
+            "15000",
+            "20000",
+            "25000",
+            "41000",
+            "60000",
+            "600000",
+            ""
+          ],
+          [
+            "",
+            "Производительность, (м3/час)",
+            "Производительность, (м3/час)",
+            "Производительность, (м3/час)",
+            "Производительность, (м3/час)",
+            "Производительность, (м3/час)",
+            "Производительность, (м3/час)",
+            "Производительность, (м3/час)",
+            "Производительность, (м3/час)",
+            "Производительность, (м3/час)",
+            "Производительность, (м3/час)",
+            "Производительность, (м3/час)"
+          ]
+        ],
+        "cta": "Наши специалисты всегда готовы помочь Вам в подборе, а также предоставить максимально полную информацию и консультацию о любом оборудовании компании ТОО KAZaircompressor (КАЗэйркомпрессор)!"
+      }
+    },
+    {
+      "name": "Поршневые компрессоры высокого давления (Воздух, Газ, Азот, Гелий)",
+      "manufacturer": [],
+      "types": [
+        "ременные",
+        "прямой привод",
+        "прямой привод с частотным преобразователем",
+        "с осушителем",
+        "безмаслянные компрессоры (Oil Free)"
+      ],
+      "table": null,
+      "description": "В линейке оборудования ТОО KAZaircompressor (КАЗэйркомпрессор) имеются разные модели поршневых компрессоров среднего и высокого давления:",
+      "notes": {
+        "capacity_m3_hour": "12,00–2500,00; возможно больше, но это уже инженерные решения",
+        "max_working_pressure_bar": "8–500 и выше",
+        "media": [
+          "воздух",
+          "азот",
+          "гелий",
+          "аргон",
+          "природный газ",
+          "формовочный газ",
+          "газовые смеси"
+        ],
+        "cooling": [
+          "воздушное",
+          "водяное"
+        ],
+        "execution": [
+          "горизонтальное",
+          "вертикальное"
+        ],
+        "diesel_drive": "опция для некоторых компрессоров",
+        "cta": "Наши специалисты всегда готовы помочь Вам в подборе, а также предоставить максимально полную информацию и консультацию о любом оборудовании компании ТОО KAZaircompressor (КАЗэйркомпрессор)!"
+      }
+    },
+    {
+      "name": "Модульные компрессорные станции (Воздух, Газ, Азот, Кислород)",
+      "manufacturer": [],
+      "types": [
+        "блок-контейнерные",
+        "блочно-модульные",
+        "МКС",
+        "БМКС"
+      ],
+      "table": {
+        "columns": [
+          "Параметр",
+          "10 Ft",
+          "20 Ft",
+          "40 Ft",
+          "40 Ft (X)"
+        ],
+        "rows": [
+          {
+            "parameter": "Наружный размер (ДхШхВ), м",
+            "10_Ft": "3,00 х 2,43 х 2,60",
+            "20_Ft": "6,06 х 2,44 х 2,59",
+            "40_Ft": "12,19 х 2,44 х 2,59",
+            "40_Ft_X": "12,09 х 2,44 х 2,89"
+          },
+          {
+            "parameter": "Внутренний размер (ДхШхВ), м",
+            "10_Ft": "2,80 х 2,34 х 2,40",
+            "20_Ft": "5,90 х 2,35 х 2,39",
+            "40_Ft": "12,03 х 2,35 х 2,39",
+            "40_Ft_X": "12,03 х 2,35 х 2,70"
+          },
+          {
+            "parameter": "Размер входной двери, м",
+            "10_Ft": "2,34 х 2,28",
+            "20_Ft": "2,34 х 2,28",
+            "40_Ft": "2,34 х 2,28",
+            "40_Ft_X": "2,34 х 2,58"
+          },
+          {
+            "parameter": "Вес пустой МКС, кг",
+            "10_Ft": "1 480",
+            "20_Ft": "2 250",
+            "40_Ft": "3 740",
+            "40_Ft_X": "3 900"
+          },
+          {
+            "parameter": "Максимальный вес МКС, кг",
+            "10_Ft": "11 900",
+            "20_Ft": "30 480",
+            "40_Ft": "30 480",
+            "40_Ft_X": "28 600"
+          }
+        ]
+      },
+      "description": "Возможности ТОО KAZaircompressor (КАЗэйркомпрессор) позволяют предложить Партнёрам и Заказчикам Модульные компрессорные станции (Блок-контейнерные, Блочно-модульные, МКС или БМКС) с различным наполнением и исполнением — по требованию Заказчика.",
+      "notes": {
+        "possible_compressors": [
+          "поршневые",
+          "винтовые с электрическим приводом",
+          "винтовые с приводом от дизельного двигателя",
+          "турбокомпрессоры",
+          "воздуходувки",
+          "дожимные компрессоры",
+          "компрессоры высокого давления"
+        ],
+        "uses": [
+          "нефте-газодобывающая сфера",
+          "транспортировка нефти и газа",
+          "перерабатывающие предприятия",
+          "пищевые предприятия",
+          "производство и транспортировка цемента и других сыпучих продуктов",
+          "производство и транспортировка муки",
+          "предприятия без капитальных строений под компрессорное оборудование",
+          "любое предприятие, где есть необходимость"
+        ],
+        "climate": "УХЛ1, от −60 °C до +45 °C, ГОСТ 15150",
+        "cta": "Наши специалисты всегда готовы помочь Вам в подборе, а также предоставить максимально полную информацию и консультацию о любом оборудовании компании ТОО KAZaircompressor (КАЗэйркомпрессор)!"
+      }
+    },
+    {
+      "name": "Осушители сжатого воздуха (Азот, Кислород, Водород, Природный и попутный газы)",
+      "manufacturer": [
+        "OmegaAir",
+        "ROTORCOMP"
+      ],
+      "types": [
+        "рефрижераторного типа",
+        "адсорбционного типа (холодная регенерация)",
+        "адсорбционного типа (горячая регенерация)"
+      ],
+      "table": null,
+      "description": "В линейке ТОО KAZaircompressor (КАЗэйркомпрессор) имеются несколько Производителей осушителей для различных сред — OmegaAir (Словения) и ROTORCOMP (Китай).",
+      "notes": {
+        "brand_positioning": {
+          "OmegaAir": "для компаний, которые хотят получить безупречное качество и 100% гарантию ожидаемого результата в эксплуатации",
+          "ROTORCOMP": "для компаний, которые желают приобрести надёжное оборудование при соотношении цена-качество"
+        },
+        "capacity_m3_min": "до 1000",
+        "pressure_bar": "до 400",
+        "cta": "Наши специалисты всегда готовы помочь Вам в подборе, а также предоставить максимально полную информацию и консультацию о любом оборудовании компании ТОО KAZaircompressor (КАЗэйркомпрессор)!"
+      }
+    },
+    {
+      "name": "Фильтры и фильтр элементы",
+      "manufacturer": [
+        "Donaldson",
+        "OmegaAir",
+        "ROTORCOMP"
+      ],
+      "types": [
+        "циклонные сепараторы",
+        "фильтры в алюминиевом корпусе",
+        "фильтры в стальном корпусе",
+        "высокотемпературные фильтры",
+        "фильтры для высокого давления",
+        "фильтры из нержавеющей стали",
+        "фильтры для любых газов",
+        "стерильные фильтры",
+        "мешочные фильтры"
+      ],
+      "table": null,
+      "description": "В линейке ТОО KAZaircompressor (КАЗэйркомпрессор) имеются несколько Производителей фильтров и фильтр элементов для различных сред (воздух, газ) — Donaldson (Германия), OmegaAir (Словения) и ROTORCOMP (Китай).",
+      "notes": {
+        "brand_positioning": {
+          "Donaldson": "Premium brand с отличным качеством, для предприятий использующих дорогое и качественное оборудование",
+          "OmegaAir": "для компаний, которые хотят получить безупречное качество и 100% гарантию ожидаемого результата в эксплуатации",
+          "ROTORCOMP": "для компаний, которые желают приобрести надёжное оборудование при соотношении цена-качество"
+        },
+        "media": [
+          "воздух",
+          "газы",
+          "жидкости"
+        ],
+        "cta": "Наши специалисты всегда готовы помочь Вам в подборе, а также предоставить максимально полную информацию и консультацию о любом оборудовании компании ТОО KAZaircompressor (КАЗэйркомпрессор)!"
+      }
+    },
+    {
+      "name": "Ресиверы (воздухосборники)",
+      "manufacturer": [],
+      "types": [],
+      "table": null,
+      "description": "Компания ТОО KAZaircompressor (КАЗэйркомпрессор) предлагает выбор ресиверов для сжатого воздуха и различных газов.",
+      "notes": {
+        "volume_m3": "до 100 и более",
+        "pressure_bar": "до 400",
+        "included": [
+          "клапан предохранительный",
+          "манометр",
+          "кран для слива конденсата",
+          "техническая документация"
+        ],
+        "common_models_volume_m3": "0,25–0,9 (25–900 литров)",
+        "common_models_pressure_bar": "10–40",
+        "customization": [
+          "диаметр емкости",
+          "длина по обечайке",
+          "вертикальное или горизонтальное исполнение",
+          "диаметр, вид и размеры штуцеров и их расположение",
+          "площадка или специальное крепление для установки компрессора",
+          "ручка для перемещения",
+          "колеса",
+          "ножки под существующее крепление",
+          "замена штуцеров на фланцы",
+          "изменение комплектации",
+          "сталь Ст3, 09Г2С или нержавеющая",
+          "утолщение обечайки",
+          "конструкция под вакуум или избыточное давление",
+          "антикоррозионное покрытие (эмаль КО-813)"
+        ],
+        "cta": "Наши специалисты всегда готовы помочь Вам в подборе, а также предоставить максимально полную информацию и консультацию о любом оборудовании компании ТОО KAZaircompressor (КАЗэйркомпрессор)!"
+      }
+    },
+    {
+      "name": "Генераторы Азота и Кислорода",
+      "manufacturer": "OmegaAir",
+      "types": [
+        "N-GEN серия",
+        "N-GEN SKID серия",
+        "O-GEN серия",
+        "O-GEN SKID серия"
+      ],
+      "table": null,
+      "description": "Генераторы Азота (N2) и Кислорода (O2), предлагаемые компанией ТОО KAZaircompressor (КАЗэйркомпрессор):",
+      "notes": {
+        "n_gen": {
+          "technology": "PSA",
+          "working_pressure_bar": "6–10",
+          "temperature_range_c": "5–50",
+          "ambient_temperature_max_c": "40",
+          "dew_point_atm_c": "< -45",
+          "capacity_nm3_h": "0,83–766,8",
+          "purity_percent": "до 99,999"
+        },
+        "o_gen": {
+          "technology": "PSA",
+          "working_pressure_bar": "5–6",
+          "temperature_range_c": "5–50",
+          "ambient_temperature_max_c": "45",
+          "dew_point_atm_c": "< -60",
+          "capacity_nm3_h": "1,02–94,9",
+          "purity_percent": "до 95"
+        },
+        "cta": "Наши специалисты всегда готовы помочь Вам в подборе, а также предоставить максимально полную информацию и консультацию о любом оборудовании компании ТОО KAZaircompressor (КАЗэйркомпрессор)!"
+      }
+    },
+    {
+      "name": "Компрессоры для газа (АГНКС и АЗС СПГ)",
+      "manufacturer": [],
+      "types": [
+        "Решения для АГНКС",
+        "Решения для АЗС СПГ",
+        "Безмаслянные поршневые компрессорные установки для АГНКС",
+        "Водородные станции",
+        "Оборудование для очистки природного газа",
+        "Оборудование для глубокой переработки природного газа",
+        "EPC сервис"
+      ],
+      "table": null,
+      "description": "В линейке оборудования ТОО KAZaircompressor (КАЗэйркомпрессор) имеются следующие решения для нефтегазового сектора:",
+      "notes": {
+        "partner_country": "Китай",
+        "partner_scope": "разработка и производство оборудования для экологически чистой энергии, очистки природного газа и его обработки до конечного применения",
+        "rd_staff": "более 140 сотрудников отдела исследований и разработок",
+        "patents": "170 патентов, включая 24 патента на изобретения",
+        "software_copyrights": 20,
+        "cta": "Наши специалисты всегда готовы помочь Вам в подборе, а также предоставить максимально полную информацию и консультацию о любом оборудовании компании ТОО KAZaircompressor (КАЗэйркомпрессор)!"
+      }
+    },
+    {
+      "name": "Запасные части и расходные материалы",
+      "manufacturer": [
+        "ALMiG",
+        "ALUP",
+        "OMEGA AIR",
+        "SAUER",
+        "BAUER",
+        "ROTORCOMP",
+        "LUPAMAT",
+        "ATLAS COPCO",
+        "CECATTO",
+        "HANWHA TECHWIN (SAMSUNG)",
+        "SeAH",
+        "BOGE",
+        "GARDNER DENVER",
+        "DONALDSON",
+        "INGERSOLL RAND",
+        "KAESER",
+        "SULLAIR",
+        "RENNER",
+        "FS Elliot",
+        "CAMERON",
+        "COMPRAG"
+      ],
+      "types": [],
+      "table": null,
+      "description": "Запасные части и расходные материалы практически к любому компрессорному оборудованию, осушителям, фильтрам и фильтр-элементам.",
+      "notes": {
+        "source_wording": "и многие другие",
+        "origin": "Европа",
+        "cta": "Наши специалисты всегда готовы помочь Вам в подборе, а также предоставить максимально полную информацию и консультацию о любом оборудовании компании ТОО KAZaircompressor (КАЗэйркомпрессор)!"
+      }
+    },
+    {
+      "name": "Сервис",
+      "manufacturer": [],
+      "types": [],
+      "table": null,
+      "description": "Компания ТОО KAZaircompressor (КАЗэйркомпрессор) предлагает услуги по гарантийному и послегарантийному обслуживанию, сервису и ремонту любого компрессорного оборудования.",
+      "notes": {
+        "services": [
+          "подбор и доставка любых запчастей и расходных материалов, оригинальных и альтернативного производства",
+          "гарантийное и послегарантийное сопровождение винтовых, поршневых и центробежных компрессоров, а также оборудования по воздухоподготовке",
+          "подбор оборудования для задач любой сложности, связанных с использованием сжатого воздуха",
+          "пневмоаудит",
+          "проектирование и монтаж/демонтаж любого компрессорного оборудования",
+          "технические консультации и обучение персонала",
+          "диагностика и обследование оборудования",
+          "сервис и ремонт любого компрессорного оборудования любой сложности",
+          "оценка эффективности использования оборудования",
+          "измерение расходов сжатого воздуха",
+          "и многое другое"
+        ],
+        "cta": "Наши специалисты всегда готовы помочь Вам в подборе, а также предоставить максимально полную информацию и консультацию о любом оборудовании компании ТОО KAZaircompressor (КАЗэйркомпрессор)!"
+      }
+    }
+  ],
+  "source_tables": {
+    "table_count": 7,
+    "note": "Полные таблицы перенесены из исходного DOCX без сокращения строк."
+  }
+}

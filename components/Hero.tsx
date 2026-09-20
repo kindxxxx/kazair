@@ -1,28 +1,34 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { WhatsAppLink } from "@/components/ContactLinks";
+import { heroSlides, type HeroSlideId } from "@/data/hero-slides";
+import { catalogCardImageClass } from "@/lib/media";
 import { useLocale } from "@/lib/i18n/locale";
-
-const brands = ["ALMiG", "Hanwha", "ROTORCOMP", "Atlas Copco"];
+import { cn } from "@/lib/utils";
 
 export function Hero() {
   const { t } = useLocale();
   const [slide, setSlide] = useState(0);
-  const slides = [
-    { title: t.hero.aboutSlides.company, text: t.company.aboutLead },
-    { title: t.hero.aboutSlides.work, text: t.company.aboutText },
-    { title: t.hero.aboutSlides.projects, text: t.company.aboutProjects },
-    { title: t.hero.aboutSlides.industries, text: t.company.aboutIndustries },
-  ];
+
+  const slides = heroSlides.map((item) => ({
+    ...item,
+    ...t.hero.carousel[item.id as HeroSlideId],
+  }));
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setSlide((value) => (value + 1) % slides.length);
+    }, 4500);
+    return () => window.clearInterval(timer);
+  }, [slides.length]);
+
   const current = slides[slide];
-  const go = (next: number) => setSlide((next + slides.length) % slides.length);
-  const touchX = useRef<number | null>(null);
 
   return (
-    <section className="relative isolate overflow-hidden bg-navy text-white">
+    <section data-testid="hero" className="relative isolate overflow-hidden bg-navy text-white">
       <Image
         src="/images/hero-bg.webp"
         alt=""
@@ -31,97 +37,72 @@ export function Hero() {
         className="object-cover object-[72%_center]"
         sizes="100vw"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/78 to-navy/35" />
-      <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-navy/25" />
+      <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/82 to-navy/28" />
+      <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/20 to-navy/30" />
 
-      <div className="container-site relative grid min-h-[100svh] items-center gap-8 py-28 lg:grid-cols-[1.05fr_0.95fr] lg:py-32">
-        <div className="max-w-2xl rounded-xl border border-white/12 bg-white/8 p-6 shadow-[0_20px_60px_rgba(0,20,40,0.25)] backdrop-blur-md sm:p-8">
-          <p className="text-xs font-semibold tracking-[0.2em] text-brand uppercase">
-            {t.hero.facts}
-          </p>
-          <h1 className="mt-5 max-w-4xl font-display text-[1.7rem] leading-tight uppercase sm:text-4xl lg:text-5xl">
+      <div className="container-site relative grid min-h-[92svh] items-center gap-8 pb-12 pt-32 lg:grid-cols-[1.05fr_0.95fr] lg:pt-36">
+        <div className="max-w-3xl">
+          <h1 className="max-w-4xl font-display text-[1.85rem] leading-[1.12] uppercase sm:text-5xl lg:text-[3.4rem]">
             {t.company.headline}
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-7 text-white/85 sm:text-lg">
             {t.company.heroSubtitle}
           </p>
-          <p className="mt-5 max-w-2xl text-sm text-white/70">
-            {t.hero.brands}: {brands.join(", ")}
+          <p className="mt-8 text-xs font-semibold tracking-[0.18em] text-brand uppercase">
+            {t.hero.consultAsk}
           </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a href="#catalog" className="btn btn-primary px-7 py-3.5">
-              {t.hero.catalog}
-            </a>
-            <WhatsAppLink className="btn btn-secondary px-7 py-3.5">WhatsApp</WhatsAppLink>
-          </div>
         </div>
 
-        <article
-          id="about"
-          className="flex min-h-[22rem] scroll-mt-28 flex-col rounded-xl border border-white/12 bg-white/8 p-6 shadow-[0_20px_60px_rgba(0,20,40,0.25)] backdrop-blur-md sm:min-h-[24rem] sm:p-8"
-          aria-roledescription="carousel"
-          aria-label={t.about.label}
-          onTouchStart={(event) => {
-            touchX.current = event.changedTouches[0]?.clientX ?? null;
-          }}
-          onTouchEnd={(event) => {
-            if (touchX.current == null) return;
-            const dx = (event.changedTouches[0]?.clientX ?? touchX.current) - touchX.current;
-            if (dx > 48) go(slide - 1);
-            if (dx < -48) go(slide + 1);
-            touchX.current = null;
-          }}
+        <div
+          className="overflow-hidden rounded-2xl bg-white/95 text-navy shadow-[0_24px_60px_rgba(0,18,36,0.28)]"
+          data-testid="hero-carousel"
         >
-          <p className="text-xs font-semibold tracking-[0.18em] text-brand uppercase">
-            {t.about.label}
-          </p>
-          <h2 className="mt-3 font-display text-2xl md:text-3xl">{current.title}</h2>
-          <p
-            key={slide}
-            className="mt-4 flex-1 text-sm leading-7 text-white/80 sm:text-base"
-            aria-live="polite"
-          >
-            {current.text}
-          </p>
-
-          <div className="mt-6 flex items-center justify-between gap-3">
-            <p className="text-xs tracking-wide text-white/55">
-              {t.hero.aboutSlideOf
-                .replace("{current}", String(slide + 1))
-                .replace("{total}", String(slides.length))}
-            </p>
-            <div className="flex items-center gap-2">
+          <Link href={current.href} className="block">
+            <span className="relative block aspect-[16/9] bg-white">
+              <Image
+                src={current.image}
+                alt={current.title}
+                fill
+                priority
+                className={catalogCardImageClass}
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </span>
+            <span className="block p-5">
+              <span className="block font-display text-xl leading-snug">{current.title}</span>
+              <span className="mt-2 block text-sm leading-6 text-muted">{current.text}</span>
+            </span>
+          </Link>
+          <div className="flex items-center justify-between border-t border-navy/8 px-4 py-3">
+            <button
+              type="button"
+              className="grid h-10 w-10 place-items-center rounded-lg bg-navy/8"
+              aria-label={t.hero.aboutPrev}
+              onClick={() => setSlide((value) => (value - 1 + slides.length) % slides.length)}
+            >
+              <ChevronLeft className="h-5 w-5" />
+            </button>
+            <div className="flex gap-2">
               {slides.map((item, index) => (
                 <button
-                  key={item.title}
+                  key={item.id}
                   type="button"
-                  aria-label={`${index + 1}`}
-                  aria-current={index === slide ? true : undefined}
+                  aria-label={item.title}
+                  className={cn("h-2.5 w-2.5 rounded-full", index === slide ? "bg-brand" : "bg-navy/20")}
                   onClick={() => setSlide(index)}
-                  className={`h-2 rounded-full transition ${
-                    index === slide ? "w-6 bg-brand" : "w-2 bg-white/35 hover:bg-white/60"
-                  }`}
                 />
               ))}
-              <button
-                type="button"
-                onClick={() => go(slide - 1)}
-                className="ml-1 grid h-9 w-9 place-items-center rounded-full border border-white/20 bg-white/10 text-white transition hover:bg-white/20"
-                aria-label={t.hero.aboutPrev}
-              >
-                <ChevronLeft className="h-4 w-4" />
-              </button>
-              <button
-                type="button"
-                onClick={() => go(slide + 1)}
-                className="grid h-9 w-9 place-items-center rounded-full border border-white/20 bg-white/10 text-white transition hover:bg-white/20"
-                aria-label={t.hero.aboutNext}
-              >
-                <ChevronRight className="h-4 w-4" />
-              </button>
             </div>
+            <button
+              type="button"
+              className="grid h-10 w-10 place-items-center rounded-lg bg-navy/8"
+              aria-label={t.hero.aboutNext}
+              onClick={() => setSlide((value) => (value + 1) % slides.length)}
+            >
+              <ChevronRight className="h-5 w-5" />
+            </button>
           </div>
-        </article>
+        </div>
       </div>
     </section>
   );

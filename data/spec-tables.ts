@@ -1,3 +1,4 @@
+import { catalogTables } from "@/data/catalog-from-json";
 import type { Locale } from "@/lib/i18n/types";
 
 export type SpecTable = {
@@ -248,7 +249,7 @@ export const specTables: SpecTable[] = [
 ];
 
 export function getSpecTable(id: string) {
-  return specTables.find((item) => item.id === id);
+  return catalogTables.find((item) => item.id === id) ?? specTables.find((item) => item.id === id);
 }
 
 export function localizeSpecTable(table: SpecTable, locale: Locale) {

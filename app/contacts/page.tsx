@@ -6,7 +6,7 @@ import { getSiteUrl } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Контакты",
   description:
-    "Офис KAZaircompressor в Алматы, ул. Рыскулова 130 А. Телефоны +7 (701) 713-14-97 и +7 (727) 338-49-89.",
+    "Офис KAZaircompressor в Алматы, ул. Рыскулова 130 А. Телефон +7 (701) 713-14-97.",
   alternates: { canonical: "/contacts" },
   openGraph: { url: "/contacts" },
 };
@@ -15,7 +15,7 @@ export default function ContactsPage() {
   const siteUrl = getSiteUrl();
 
   return (
-    <div className="pt-16">
+    <div className="pt-24">
       <JsonLd
         data={{
           "@context": "https://schema.org",

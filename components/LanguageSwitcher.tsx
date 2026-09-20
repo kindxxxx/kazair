@@ -1,17 +1,15 @@
-"use client";
-
 import { useLocale } from "@/lib/i18n/locale";
 import { cn } from "@/lib/utils";
-
 
 export function LanguageSwitcher() {
   const { locale, setLocale, t } = useLocale();
 
   return (
     <div
-      className="inline-flex h-11 overflow-hidden rounded-[10px] border border-white/15 bg-white/10"
+      className="inline-flex h-10 overflow-hidden rounded-lg border border-navy/12 bg-white/70"
       role="group"
       aria-label={t.header.language}
+      data-testid="language-switcher"
     >
       {(
         [
@@ -22,10 +20,11 @@ export function LanguageSwitcher() {
         <button
           key={item.id}
           type="button"
+          data-testid={`language-${item.id}`}
           onClick={() => setLocale(item.id)}
           className={cn(
             "px-3 text-xs font-semibold tracking-wide transition",
-            locale === item.id ? "bg-white text-navy" : "text-white/75 hover:text-white",
+            locale === item.id ? "bg-navy text-white" : "text-navy/65 hover:text-navy",
           )}
           aria-pressed={locale === item.id}
         >

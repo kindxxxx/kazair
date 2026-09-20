@@ -75,7 +75,7 @@ export async function POST(request: Request) {
   } catch {
     return json(502, {
       ok: false,
-      error: "Не удалось отправить заявку. Позвоните +7 (727) 338-49-89 или напишите в WhatsApp.",
+      error: "Не удалось отправить заявку. Позвоните +7 (701) 713-14-97 или напишите в WhatsApp.",
     });
   }
 }

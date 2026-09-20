@@ -18,7 +18,7 @@ export function Clients() {
           <h2 className="mt-3 font-display text-3xl md:text-4xl">{t.clients.title}</h2>
           <p className="mt-4 max-w-3xl text-muted">{t.clients.lead}</p>
         </Reveal>
-        <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7">
+        <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-5">
           {clients.map((client) => (
             <div key={client.src} className="grid h-24 place-items-center px-4">
               <Image
